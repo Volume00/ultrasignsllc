@@ -1,0 +1,265 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1em;
+    border-bottom: 3px solid #002b7f;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #002b7f;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff3b30;
+    color: white;
+}
+
+/* Hero Section for Index Page */
+.hero {
+    background-color: #002b7f;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+/* Footer */
+footer {
+    background-color: #002b7f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* ----- Specific Styles for the "Products & Services" Page ----- */
+
+/* Products Hero Section */
+.products-hero {
+    background-color: #002b7f;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.products-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.products-hero p {
+    font-size: 1.2em;
+}
+
+/* Product Categories Section */
+.product-categories {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.product-categories h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.product-categories .category {
+    margin-bottom: 30px;
+}
+
+.product-categories .category h3 {
+    font-size: 1.5em;
+    color: #002b7f;
+}
+
+.product-categories .category p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Gallery Section */
+.product-gallery {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.product-gallery h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 200px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #002b7f;
+    border-radius: 10px;
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #002b7f;
+}
+
+/* About Page Hero Section */
+.about-hero {
+    background-color: #002b7f;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.about-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    font-size: 1.2em;
+}
+
+/* About Content Section */
+.about-content {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 2em;
+    color: #002b7f;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.about-content ul li {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #002b7f;
+}
+
+.about-content ul li strong {
+    color: #ff3b30;
+}
+
+/* Contact Page Hero Section */
+.contact-hero {
+    background-color: #002b7f;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.contact-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-hero p {
+    font-size: 1.2em;
+}
+
+/* Contact Details Section */
+.contact-details {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.contact-details h2 {
+    font-size: 2em;
+    color: #002b7f;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-details a {
+    color: #002b7f;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: #ff3b30;
+}
+
+/* Map Container */
+.map-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}

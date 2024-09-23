@@ -1,0 +1,79 @@
+/* Product & Services Hero Section */
+.products-hero {
+    background-color: #002b7f;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.products-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.products-hero p {
+    font-size: 1.2em;
+}
+
+/* Product Categories Section */
+.product-categories {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.product-categories h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.product-categories .category {
+    margin-bottom: 30px;
+}
+
+.product-categories .category h3 {
+    font-size: 1.5em;
+    color: #002b7f;
+}
+
+.product-categories .category p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Gallery Section */
+.product-gallery {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.product-gallery h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    width: 200px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #002b7f;
+    border-radius: 10px;
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #002b7f;
+}
