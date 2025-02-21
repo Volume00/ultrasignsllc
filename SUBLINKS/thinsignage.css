@@ -86,7 +86,7 @@ footer {
 /* Gallery Section */
 /* Gallery Section */
 .domestic-gallery {
-    padding: 1vw;
+    padding: 4vw;
     text-align: center;
     background-color: #6c7296;
 }
@@ -104,7 +104,7 @@ footer {
 .gallery-grid {
     display: grid;
     grid-template-columns: 1fr; /* One image per row */
-    gap: 0.8vw; /* Reduced gap between images */
+    gap: 2.8vw; /* Reduced gap between images */
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease-in-out; /* Smooth shifting */
@@ -124,12 +124,43 @@ footer {
 
 /* Image Styling */
 .gallery-item img {
-    width: 90vw;
-    height: 25vw;
-    object-fit: cover; /* Ensures cropping instead of stretching */
+    width: 85%%;
+    /*height: 25vw;*/
+    object-fit: fill; /* Ensures cropping instead of stretching */
     border-radius: 1.5vw;
     clip-path: inset(0 round 1.5vw); /* Prevents clipping issues */
     transition: transform 0.4s ease-in-out; /* Smooth zoom effect */
+}
+
+/* Dynamic height adjustment */
+.gallery-item[data-size="30"] img {
+    width: 100%%;
+    height: auto;
+}
+
+.gallery-item[data-size="40"] img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item[data-size="50"] img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item[data-size="60"] img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item[data-size="100"] img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item[data-size="150"] img {
+    width: 100%;
+    height: auto;
 }
 
 /* Text Styling - Initially Hidden */
@@ -148,6 +179,9 @@ footer {
     border-radius: 0.5vw;
 }
 
+
+
+
 /* Smooth Zoom & Shift Effect */
 .gallery-grid:hover {
     transform: translateY(-1vw); /* Shifts the entire grid up slightly */
@@ -159,7 +193,7 @@ footer {
 }
 
 .gallery-item:hover img {
-    transform: scale(1.07); /* Slightly increased zoom */
+    transform: scale(1.04); /* Slightly increased zoom */
 }
 
 /* Move H2 Title Slightly Up When Hovering on Any Image */
@@ -168,13 +202,7 @@ footer {
     transform: translateY(-10px);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-    .gallery-item img {
-        width: 95vw; /* Slightly larger on smaller screens */
-        height: 35vh; /* Adjusted height */
-    }
-}
+
 
 
 /* Modal Popup */
