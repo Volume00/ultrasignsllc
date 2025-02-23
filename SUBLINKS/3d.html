@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <!-- Page-Specific Styles -->
-    <link rel="stylesheet" href="3d.css">
+    <link rel="stylesheet" href="../css/3d.css">
 </head>
 <body>
     <header>
@@ -83,6 +83,7 @@
     </section>
 
     <!-- Modal Popup for Interactive Details -->
+    <!-- Modal Popup for Interactive Details -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -99,39 +100,73 @@
     <!-- JavaScript for Modal and Hamburger Menu -->
     <script>
         // Open Modal
-        function openModal(sample) {
-            const modal = document.getElementById('modal');
-            const modalImg = document.getElementById('modal-img');
-            const modalTitle = document.getElementById('modal-title');
-            const modalDescription = document.getElementById('modal-description');
+    function openModal(sample) {
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
 
-            // Set modal content based on the sample clicked
-            switch (sample) {
-                case 'sample1':
-                    modalImg.src = '../MEDIA/IMG_20250213_135048.jpg';
-                    modalTitle.textContent = 'LA - Sample #01';
-                    modalDescription.textContent = 'Detailed and elegant 3D signage.';
-                    break;
-                case 'sample2':
-                    modalImg.src = '../MEDIA/IMG_20250213_140112.jpg';
-                    modalTitle.textContent = 'LA - Sample #02';
-                    modalDescription.textContent = 'Precise and vibrant 3D signage.';
-                    break;
-                // Add cases for other samples...
-            }
-
-            modal.style.display = 'block';
+        // Set modal content based on the sample clicked
+        switch (sample) {
+            case 'sample1':
+                modalImg.src = '../MEDIA/IMG_20250213_135048.jpg';
+                modalTitle.textContent = 'LA - Sample #01';
+                modalDescription.textContent = 'Detailed and elegant 3D signage.';
+                break;
+            case 'sample2':
+                modalImg.src = '../MEDIA/IMG_20250213_140112.jpg';
+                modalTitle.textContent = 'LA - Sample #02';
+                modalDescription.textContent = 'Precise and vibrant 3D signage.';
+                break;
+            case 'sample3':
+                modalImg.src = '../MEDIA/IMG_20250213_140343.jpg';
+                modalTitle.textContent = 'LA - Sample #03';
+                modalDescription.textContent = 'Stylish and modern 3D signage.';
+                break;
+            case 'sample4':
+                modalImg.src = '../MEDIA/IMG_20250213_140443.jpg';
+                modalTitle.textContent = 'LA - Sample #04';
+                modalDescription.textContent = 'Customizable and energy-efficient 3D signage.';
+                break;
+            case 'sample5':
+                modalImg.src = '../MEDIA/IMG_20250213_140448.jpg';
+                modalTitle.textContent = 'LA - Sample #05';
+                modalDescription.textContent = 'Bright and adjustable 3D signage.';
+                break;
+            case 'sample6':
+                modalImg.src = '../MEDIA/IMG_20250213_134554.jpg';
+                modalTitle.textContent = 'LA - Sample #06';
+                modalDescription.textContent = 'Innovative and captivating 3D signage.';
+                break;
+            case 'sample7':
+                modalImg.src = '../MEDIA/1.jpg';
+                modalTitle.textContent = 'HORIZON STRETCH - Sample #01';
+                modalDescription.textContent = 'Stunning and versatile 3D signage.';
+                break;
+            case 'sample8':
+                modalImg.src = '../MEDIA/3.jpg';
+                modalTitle.textContent = 'HORIZON STRETCH - Sample #02';
+                modalDescription.textContent = 'Elegant and customizable 3D signage.';
+                break;
+            case 'sample9':
+                modalImg.src = '../MEDIA/4.jpg';
+                modalTitle.textContent = 'HORIZON STRETCH - Sample #03';
+                modalDescription.textContent = 'Bright and energy-efficient 3D signage.';
+                break;
         }
 
-        // Close Modal
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-        }
+        modal.style.display = 'block';
+    }
 
-        // Hamburger Menu Toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
+    // Close Modal
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+
+    // Hamburger Menu Toggle
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
     </script>
 </body>
 </html>
