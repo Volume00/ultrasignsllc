@@ -1,0 +1,28 @@
+footer {
+    background-color: #002b7f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links img {
+    height: 24px;
+    margin: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .social-links {
+        margin-top: 0.5rem;
+    }
+}
