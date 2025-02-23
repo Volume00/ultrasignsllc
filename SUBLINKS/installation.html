@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Installation & Services | Ultra Signs LLC</title>
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Component-Specific Styles -->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <!-- Page-Specific Styles -->
     <link rel="stylesheet" href="installation.css">
 </head>
 <body>
@@ -14,29 +20,32 @@
             <img src="../MEDIA/UltraSigns_US_Logo.png" alt="Ultra Signs LLC Logo">
         </div>
         <nav>
-            <ul>
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+            <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../products&services.html">Products & Services</a></li>
                 <li><a href="../about.html">About</a></li>
                 <li><a href="../contact.html">Contact</a></li>
-                <li><a href="../index.html"><img src="../MEDIA/instagram.png" class="socialmedia"></a></li>
-                <li><a href="../index.html"><img src="../MEDIA/facebook.png" class="socialmedia"></a></li>
-                <li><a href="../index.html"><img src="../MEDIA/tiktok.png" class="socialmedia"></a></li>
+                <li><a href="../index.html"><img src="../MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
+                <li><a href="../index.html"><img src="../MEDIA/facebook.png" class="socialmedia" alt="Facebook"></a></li>
+                <li><a href="../index.html"><img src="../MEDIA/tiktok.png" class="socialmedia" alt="TikTok"></a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="domestic-hero">
-        <h1>Installation & Services</h1>
-        <p>Providing expert installation and maintenance solutions for all types of LED signage.</p>
+        <div class="hero-content">
+            <h1>Installation & Services</h1>
+            <p>Providing expert installation and maintenance solutions for all types of LED signage.</p>
+        </div>
     </section>
 
     <!-- Installation Services Section -->
     <section class="service-content">
         <h2>Our Installation Services</h2>
         <p>
-            We specialize in the professional installation of LED signs for both **commercial and residential** applications. 
+            We specialize in the professional installation of LED signs for both <strong>commercial and residential</strong> applications. 
             Our team ensures proper setup, secure mounting, and full functionality of all our signage products.
         </p>
 
@@ -52,7 +61,7 @@
     <section class="service-content">
         <h2>Maintenance & Repair Services</h2>
         <p>
-            Keep your signs looking bright and functioning efficiently with our **routine maintenance and repair services**.
+            Keep your signs looking bright and functioning efficiently with our <strong>routine maintenance and repair services</strong>.
         </p>
 
         <ul>
@@ -74,5 +83,12 @@
     <footer>
         <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

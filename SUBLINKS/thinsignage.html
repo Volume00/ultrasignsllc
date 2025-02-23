@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domestic LED Signs | Ultra Signs LLC</title>
+    <title>Thin Signage | Ultra Signs LLC</title>
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Component-Specific Styles -->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <!-- Page-Specific Styles -->
     <link rel="stylesheet" href="thinsignage.css">
 </head>
 <body>
@@ -12,73 +18,63 @@
             <img src="../MEDIA/UltraSigns_US_Logo.png" alt="Ultra Signs LLC Logo">
         </div>
         <nav>
-            <ul>
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+            <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../products&services.html">Products & Services</a></li>
                 <li><a href="../about.html">About</a></li>
                 <li><a href="../contact.html">Contact</a></li>
-                <li><a href="../index.html"><img src="../MEDIA/instagram.png" class="socialmedia"></a></li>
-                <li><a href="../index.html"><img src="../MEDIA/facebook.png" class="socialmedia"></a></li>
-                <li><a href="../index.html"><img src="../MEDIA/tiktok.png" class="socialmedia"></a></li>
+                <li><a href="../index.html"><img src="../MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
+                <li><a href="../index.html"><img src="../MEDIA/facebook.png" class="socialmedia" alt="Facebook"></a></li>
+                <li><a href="../index.html"><img src="../MEDIA/tiktok.png" class="socialmedia" alt="TikTok"></a></li>
             </ul>
         </nav>
     </header>
 
     <section class="domestic-hero">
-        <h1>Ultra Thin Nice Looking Signage</h1>
-        <p>Stilish, bright, adjustable, customizable to better enhance your surroundings with a great energy efficient usage.</p>
-        <p>Shapes, textures, colors and characters can be easily customizable upon request during the placement of an order!</p>
-        <p>Here are some samples!!!</p>
+        <div class="hero-content">
+            <h1>Ultra Thin Nice Looking Signage</h1>
+            <p>Stylish, bright, adjustable, and customizable to enhance your surroundings with great energy efficiency.</p>
+            <p>Shapes, textures, colors, and characters can be easily customized upon request during the placement of an order!</p>
+            <p>Here are some samples!!!</p>
+        </div>
     </section>
 
-    
     <section class="domestic-gallery">
-        <h2>Sample Portfolio</h2>
         <h2>Thin Signage Gallery</h2>
         <div class="gallery-grid">
             <div class="gallery-item" onclick="openModal('sign1')" data-size="150">
-                <img src="MEDIA/Starbucks2.png" alt="STARBUCKS Sign Sample">
+                <img src="../MEDIA/Starbucks2.png" alt="STARBUCKS Sign Sample">
                 <p>This image showcases a sample signage project and is for illustrative purposes only.<br>
                 Ultra Signs LLC is not associated with or authorized by Starbucks Corporation,<br>
                 and this is not an official Starbucks sign.</p>
             </div>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item" onclick="openModal('sign1')" data-size="100">
-                <img src="MEDIA/nba.png" alt="NBA Sign Sample">
+            <div class="gallery-item" onclick="openModal('sign2')" data-size="100">
+                <img src="../MEDIA/nba.png" alt="NBA Sign Sample">
                 <p>This image showcases a sample signage project and is for illustrative purposes only.<br>
                 Ultra Signs LLC is not associated with or authorized by the National Basketball Association (NBA),<br>
                 and this is not an official NBA sign.</p>
             </div>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item" onclick="openModal('sign1')" data-size="60">
-                <img src="MEDIA/cpma-y.png" alt="CPMA LOGO Sample">
+            <div class="gallery-item" onclick="openModal('sign3')" data-size="60">
+                <img src="../MEDIA/cpma-y.png" alt="CPMA LOGO Sample">
                 <p>Elegant And Cost Efficient Products!</p>
             </div>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item" onclick="openModal('sign1')" data-size="60">
-                <img src="MEDIA/damian.png" alt="DV Sign Sample">
+            <div class="gallery-item" onclick="openModal('sign4')" data-size="60">
+                <img src="../MEDIA/damian.png" alt="DV Sign Sample">
                 <p>Shop, Home, Office - Indoor Decor<br>
                 Perfect Choice, Custom Colors & Complexity</p>
             </div>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item" onclick="openModal('sign1')" data-size="50">
-                <img src="MEDIA/hbd-blue1.jpg" alt="HBD-BLUE Sign Sample">
+            <div class="gallery-item" onclick="openModal('sign5')" data-size="50">
+                <img src="../MEDIA/hbd-blue1.jpg" alt="HBD-BLUE Sign Sample">
                 <p>Birthday Signs Decor<br>
                 Build Your Own With Unique Custom Designs And Amazing Features!</p>
             </div>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item" onclick="openModal('sign1')" data-size="50">
-                <img src="MEDIA/hbd-red1.jpg" alt="HBD-RED Sign Sample">
+            <div class="gallery-item" onclick="openModal('sign6')" data-size="50">
+                <img src="../MEDIA/hbd-red1.jpg" alt="HBD-RED Sign Sample">
                 <p>Birthday Signs Decor - Inverse<br>
                 Build Your Own With Unique Custom Designs And Amazing Features!</p>
             </div>
         </div>
-        
     </section>
 
     <!-- Modal Popup for Interactive Details -->
@@ -95,7 +91,61 @@
         <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
     </footer>
 
-    <script src="../script.js"></script>
+    <!-- JavaScript for Modal and Hamburger Menu -->
+    <script>
+        // Open Modal
+        function openModal(sign) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+
+            // Set modal content based on the sign clicked
+            switch (sign) {
+                case 'sign1':
+                    modalImg.src = '../MEDIA/Starbucks2.png';
+                    modalTitle.textContent = 'STARBUCKS Sign Sample';
+                    modalDescription.textContent = 'This image showcases a sample signage project and is for illustrative purposes only. Ultra Signs LLC is not associated with or authorized by Starbucks Corporation, and this is not an official Starbucks sign.';
+                    break;
+                case 'sign2':
+                    modalImg.src = '../MEDIA/nba.png';
+                    modalTitle.textContent = 'NBA Sign Sample';
+                    modalDescription.textContent = 'This image showcases a sample signage project and is for illustrative purposes only. Ultra Signs LLC is not associated with or authorized by the National Basketball Association (NBA), and this is not an official NBA sign.';
+                    break;
+                case 'sign3':
+                    modalImg.src = '../MEDIA/cpma-y.png';
+                    modalTitle.textContent = 'CPMA LOGO Sample';
+                    modalDescription.textContent = 'Elegant And Cost Efficient Products!';
+                    break;
+                case 'sign4':
+                    modalImg.src = '../MEDIA/damian.png';
+                    modalTitle.textContent = 'DV Sign Sample';
+                    modalDescription.textContent = 'Shop, Home, Office - Indoor Decor. Perfect Choice, Custom Colors & Complexity.';
+                    break;
+                case 'sign5':
+                    modalImg.src = '../MEDIA/hbd-blue1.jpg';
+                    modalTitle.textContent = 'HBD-BLUE Sign Sample';
+                    modalDescription.textContent = 'Birthday Signs Decor. Build Your Own With Unique Custom Designs And Amazing Features!';
+                    break;
+                case 'sign6':
+                    modalImg.src = '../MEDIA/hbd-red1.jpg';
+                    modalTitle.textContent = 'HBD-RED Sign Sample';
+                    modalDescription.textContent = 'Birthday Signs Decor - Inverse. Build Your Own With Unique Custom Designs And Amazing Features!';
+                    break;
+            }
+
+            modal.style.display = 'block';
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Hamburger Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
-

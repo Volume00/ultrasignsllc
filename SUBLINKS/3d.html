@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domestic LED Signs | Ultra Signs LLC</title>
+    <title>3D Character Signage | Ultra Signs LLC</title>
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- Component-Specific Styles -->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <!-- Page-Specific Styles -->
     <link rel="stylesheet" href="3d.css">
 </head>
 <body>
@@ -12,80 +18,65 @@
             <img src="../MEDIA/UltraSigns_US_Logo.png" alt="Ultra Signs LLC Logo">
         </div>
         <nav>
-            <ul>
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+            <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../products&services.html">Products & Services</a></li>
                 <li><a href="../about.html">About</a></li>
                 <li><a href="../contact.html">Contact</a></li>
-                <li><a href="../index.html"><img src="../MEDIA/instagram.png" class="socialmedia"></a></li>
-                <li><a href="../index.html"><img src="../MEDIA/facebook.png" class="socialmedia"></a></li>
-                <li><a href="../index.html"><img src="../MEDIA/tiktok.png" class="socialmedia"></a></li>
+                <li><a href="../index.html"><img src="../MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
+                <li><a href="../index.html"><img src="../MEDIA/facebook.png" class="socialmedia" alt="Facebook"></a></li>
+                <li><a href="../index.html"><img src="../MEDIA/tiktok.png" class="socialmedia" alt="TikTok"></a></li>
             </ul>
         </nav>
     </header>
 
     <section class="domestic-hero">
-        <h1>Ultimate 3d Character Signage</h1>
-        <p>Stilish, bright, adjustable, customizable to better enhance your surroundings with a great energy efficient usage.</p>
-        <p>Shapes, textures and characters can be easily customizable upon request during the placement of an order!</p>
-        <p>Be creative and order your own!!!</p>
+        <div class="hero-content">
+            <h1>Ultimate 3D Character Signage</h1>
+            <p>Stylish, bright, adjustable, and customizable to enhance your surroundings with great energy efficiency.</p>
+            <p>Shapes, textures, and characters can be easily customized upon request during the placement of an order!</p>
+            <p>Be creative and order your own!!!</p>
+        </div>
     </section>
 
-    <!--
     <section class="domestic-gallery">
-        <h2>Sample #1</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item" onclick="openModal('example1')">
-                <img src="../MEDIA/20250218_130312.jpg" alt="LED Home Sign">
-                <p>DETAILED</p>
-            </div>
-            <div class="gallery-item" onclick="openModal('example2')">
-                <img src="../MEDIA/20250218_130422.jpg" alt="Neon LED Bedroom">
-                <p>PRECISE</p>
-            </div>
-            <div class="gallery-item" onclick="openModal('example3')">
-                <img src="../MEDIA/IMG_20250213_135151.jpg" alt="Customized LED Sign">
-                <p>BEAUTIFUL</p>
-            </div>
-        </div>
-    </section>-->
-    <section class="domestic-gallery">
-        <h2>Explore Our Infinite Variety Of Layouts And Colors!</h2>
+        <h2>Explore Our Infinite Variety of Layouts and Colors!</h2>
         <div class="gallery-grid">
             <div class="gallery-item" onclick="openModal('sample1')">
-                <img src="../MEDIA/IMG_20250213_135048.jpg" alt="LED Home Sign">
+                <img src="../MEDIA/IMG_20250213_135048.jpg" alt="Sample 1">
                 <p>LA - Sample #01</p>
             </div>
             <div class="gallery-item" onclick="openModal('sample2')">
-                <img src="../MEDIA/IMG_20250213_140112.jpg" alt="Neon LED Bedroom">
+                <img src="../MEDIA/IMG_20250213_140112.jpg" alt="Sample 2">
                 <p>LA - Sample #02</p>
             </div>
             <div class="gallery-item" onclick="openModal('sample3')">
-                <img src="../MEDIA/IMG_20250213_140343.jpg" alt="Customized LED Sign">
+                <img src="../MEDIA/IMG_20250213_140343.jpg" alt="Sample 3">
                 <p>LA - Sample #03</p>
             </div>
             <div class="gallery-item" onclick="openModal('sample4')">
-                <img src="../MEDIA/IMG_20250213_140443.jpg" alt="LED Home Sign">
+                <img src="../MEDIA/IMG_20250213_140443.jpg" alt="Sample 4">
                 <p>LA - Sample #04</p>
             </div>
             <div class="gallery-item" onclick="openModal('sample5')">
-                <img src="../MEDIA/IMG_20250213_140448.jpg" alt="Neon LED Bedroom">
+                <img src="../MEDIA/IMG_20250213_140448.jpg" alt="Sample 5">
                 <p>LA - Sample #05</p>
             </div>
             <div class="gallery-item" onclick="openModal('sample6')">
-                <img src="../MEDIA/IMG_20250213_134554.jpg" alt="Customized LED Sign">
+                <img src="../MEDIA/IMG_20250213_134554.jpg" alt="Sample 6">
                 <p>LA - Sample #06</p>
             </div>
             <div class="gallery-item" onclick="openModal('sample7')">
-                <img src="../MEDIA/1.jpg" alt="LED Home Sign">
+                <img src="../MEDIA/1.jpg" alt="Sample 7">
                 <p>HORIZON STRETCH - Sample #01</p>
             </div>
             <div class="gallery-item" onclick="openModal('sample8')">
-                <img src="../MEDIA/3.jpg" alt="Neon LED Bedroom">
-                <p>HORIZON STRETCH #02</p>
+                <img src="../MEDIA/3.jpg" alt="Sample 8">
+                <p>HORIZON STRETCH - Sample #02</p>
             </div>
             <div class="gallery-item" onclick="openModal('sample9')">
-                <img src="../MEDIA/4.jpg" alt="Customized LED Sign">
+                <img src="../MEDIA/4.jpg" alt="Sample 9">
                 <p>HORIZON STRETCH - Sample #03</p>
             </div>
         </div>
@@ -105,29 +96,42 @@
         <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
     </footer>
 
-    <script src="../script.js"></script>
+    <!-- JavaScript for Modal and Hamburger Menu -->
+    <script>
+        // Open Modal
+        function openModal(sample) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDescription = document.getElementById('modal-description');
+
+            // Set modal content based on the sample clicked
+            switch (sample) {
+                case 'sample1':
+                    modalImg.src = '../MEDIA/IMG_20250213_135048.jpg';
+                    modalTitle.textContent = 'LA - Sample #01';
+                    modalDescription.textContent = 'Detailed and elegant 3D signage.';
+                    break;
+                case 'sample2':
+                    modalImg.src = '../MEDIA/IMG_20250213_140112.jpg';
+                    modalTitle.textContent = 'LA - Sample #02';
+                    modalDescription.textContent = 'Precise and vibrant 3D signage.';
+                    break;
+                // Add cases for other samples...
+            }
+
+            modal.style.display = 'block';
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Hamburger Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
-
-
-<!--
-
-    <section class="domestic-gallery">
-        <h2>Explore Our Collection</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item" onclick="openModal('sign1')">
-                <img src="MEDIA/1.jpg" alt="LED Home Sign">
-                <p>Elegant LED Wall Decor</p>
-            </div>
-            <div class="gallery-item" onclick="openModal('sign2')">
-                <img src="MEDIA/3.jpg" alt="Neon LED Bedroom">
-                <p>Neon LED Bedroom Lights</p>
-            </div>
-            <div class="gallery-item" onclick="openModal('sign3')">
-                <img src="MEDIA/4.jpg" alt="Customized LED Sign">
-                <p>Personalized LED Name Signs</p>
-            </div>
-        </div>
-    </section>
-
--->
