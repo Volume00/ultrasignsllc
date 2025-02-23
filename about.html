@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Us | Ultra Signs LLC</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Component-Specific Styles -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- Page-Specific Styles -->
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
     <header>
@@ -13,21 +19,24 @@
             <img src="MEDIA/UltraSigns_US_Logo.png" alt="Ultra Signs LLC Logo">
         </div>
         <nav>
-            <ul>
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products&services.html">Products & Services</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="index.html"><img src="MEDIA/instagram.png" class="socialmedia"></a></li>
-                <li><a href="index.html"><img src="MEDIA/facebook.png" class="socialmedia"></a></li>
-                <li><a href="index.html"><img src="MEDIA/tiktok.png" class="socialmedia"></a></li>
+                <li><a href="index.html"><img src="MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
+                <li><a href="index.html"><img src="MEDIA/facebook.png" class="socialmedia" alt="Facebook"></a></li>
+                <li><a href="index.html"><img src="MEDIA/tiktok.png" class="socialmedia" alt="TikTok"></a></li>
             </ul>
         </nav>
     </header>
 
     <section class="about-hero">
-        <h1>About Ultra Signs LLC</h1>
-        <p>Crafting high-quality, custom LED signage solutions with precision and passion.</p>
+        <div class="hero-content">
+            <h1>About Ultra Signs LLC</h1>
+            <p>Crafting high-quality, custom LED signage solutions with precision and passion.</p>
+        </div>
     </section>
 
     <section class="about-content">
@@ -55,6 +64,18 @@
 
     <footer>
         <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://instagram.com"><img src="MEDIA/instagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com"><img src="MEDIA/facebook.png" alt="Facebook"></a>
+            <a href="https://tiktok.com"><img src="MEDIA/tiktok.png" alt="TikTok"></a>
+        </div>
     </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

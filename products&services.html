@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Products & Services | Ultra Signs LLC</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Products & Services - Ultra Signs LLC</title>
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Component-Specific Styles -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- Page-Specific Styles -->
+    <link rel="stylesheet" href="css/products.css">
 </head>
 <body>
     <header>
@@ -13,19 +19,28 @@
             <img src="MEDIA/UltraSigns_US_Logo.png" alt="Ultra Signs LLC Logo">
         </div>
         <nav>
-            <ul>
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Products & Services</a></li>
+                <li><a href="products&services.html">Products & Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="index.html"><img src="MEDIA/instagram.png" class="socialmedia"></a></li>
-                <li><a href="index.html"><img src="MEDIA/facebook.png" class="socialmedia"></a></li>
-                <li><a href="index.html"><img src="MEDIA/tiktok.png" class="socialmedia"></a></li>
+                <li><a href="index.html"><img src="MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
+                <li><a href="index.html"><img src="MEDIA/facebook.png" class="socialmedia" alt="Facebook"></a></li>
+                <li><a href="index.html"><img src="MEDIA/tiktok.png" class="socialmedia" alt="TikTok"></a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="product-categories-grid">
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Our Products & Services</h1>
+            <p>Discover our wide range of high-quality LED signage solutions tailored for both commercial and domestic use.</p>
+            <a href="#product-categories" class="cta-button">View Categories</a>
+        </div>
+    </section>
+
+    <section id="product-categories">
         <a href="SUBLINKS/thinsignage.html" class="category-card" style="background-image: url('MEDIA/ultrasigns.jpg');">
             <h3>Thin Signage Boards</h3>
             <div class="description-box">Thin, energy efficient and astonishing signage!</div>
@@ -36,7 +51,7 @@
             <div class="description-box">Beautiful LED signage for your home, creating a cozy and stylish atmosphere.</div>
         </a>
 
-        <a href="#" class="category-card" style="background-image: url('MEDIA/2134.jpg');">
+        <a href="#" class="category-card" style="background-image: url('MEDIA/1_61.jpg');">
             <h3>Custom Signage</h3>
             <div class="description-box">Coming Soon</div>
         </a>
@@ -45,80 +60,29 @@
             <h3>Installation & Services</h3>
             <div class="description-box">Professional installation and upkeep services for all your signage solutions.</div>
         </a>
-<!--
-        <a href="#" class="category-card" style="background-image: url('MEDIA/comingsoon.png');">
-            <h3></h3>
-            <div class="description-box">Professional installation and upkeep services for all your signage solutions.</div>*/
-        </a>
-        <a href="#" class="category-card" style="background-image: url('MEDIA/comingsoon.png');">
-            <h3></h3>
-            /*<div class="description-box">Perfect for advertising your business 24/7 with energy-efficient LED signs.</div>*/
-        </a>
-
-        <a href="#" class="category-card" style="background-image: url('MEDIA/comingsoon.png');">
-            <h3></h3>
-            /*<div class="description-box">Beautiful LED signage for your home, creating a cozy and stylish atmosphere.</div>*/
-        </a>
-
-        <a href="#" class="category-card" style="background-image: url('MEDIA/comingsoon.png');">
-            <h3></h3>
-            /*<div class="description-box">Tailored to your specific needs for branding, decoration, or events.</div>*/
-        </a>
--->
-        
-    </section>
-    <section class="product-categories-grid">
-        
-    </section>
-
-
-    <!--
-    <section class="products-hero">
-        <h1>Our Products & Services</h1>
-        <p>From custom LED signs to comprehensive installation and maintenance, we offer solutions for all your signage needs.</p>
-    </section>
-
-    <section class="product-categories">
-        <h2>Product Categories</h2>
-        <div class="category">
-            <h3>Commercial LED Signs</h3>
-            <p>High-quality, weather-resistant LED signs perfect for advertising your business in any environment.</p>
-        </div>
-
-        <div class="category">
-            <h3>Domestic LED Signs</h3>
-            <p>Stylish and energy-efficient LED signs designed for home use, adding flair and creativity to your spaces.</p>
-        </div>
-
-        <div class="category">
-            <h3>Custom LED Signs</h3>
-            <p>Tailored LED signs crafted to your exact specifications, helping your brand stand out with personalized designs.</p>
-        </div>
-
-        <div class="category">
-            <h3>Installation & Maintenance</h3>
-            <p>Our experienced team ensures smooth installation and reliable maintenance for all signage solutions.</p>
-        </div>
-    </section>
-
-    <section class="product-gallery">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="path_to_image/sign1.jpg" alt="Commercial Sign">
-                <p>Custom LED Sign for Business</p>
-            </div>
-            <div class="gallery-item">
-                <img src="path_to_image/sign2.jpg" alt="Domestic Sign">
-                <p>Creative LED Sign for Home</p>
-            </div>
-    -->
-            <!-- Add more gallery items as needed -->
-        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://instagram.com"><img src="MEDIA/instagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com"><img src="MEDIA/facebook.png" alt="Facebook"></a>
+            <a href="https://tiktok.com"><img src="MEDIA/tiktok.png" alt="TikTok"></a>
+        </div>
     </footer>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        // Smooth Scroll and Reveal Product Categories
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            const target = document.querySelector(this.getAttribute('href')); // Get the target element
+            target.classList.add('visible'); // Add the 'visible' class
+            target.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the target
+        });
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

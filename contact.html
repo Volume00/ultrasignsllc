@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Us | Ultra Signs LLC</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Component-Specific Styles -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- Page-Specific Styles -->
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
     <header>
@@ -13,29 +19,30 @@
             <img src="MEDIA/UltraSigns_US_Logo.png" alt="Ultra Signs LLC Logo">
         </div>
         <nav>
-            <ul>
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products&services.html">Products & Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="index.html"><img src="MEDIA/instagram.png" class="socialmedia"></a></li>
-                <li><a href="index.html"><img src="MEDIA/facebook.png" class="socialmedia"></a></li>
-                <li><a href="index.html"><img src="MEDIA/tiktok.png" class="socialmedia"></a></li>
+                <li><a href="index.html"><img src="MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
+                <li><a href="index.html"><img src="MEDIA/facebook.png" class="socialmedia" alt="Facebook"></a></li>
+                <li><a href="index.html"><img src="MEDIA/tiktok.png" class="socialmedia" alt="TikTok"></a></li>
             </ul>
         </nav>
     </header>
 
     <section class="contact-hero">
-        <h1>Contact Us</h1>
-        <p>We're here to assist you with all your LED signage needs!</p>
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>We're here to assist you with all your LED signage needs!</p>
+        </div>
     </section>
 
     <section class="contact-details">
         <h2>Get In Touch</h2>
         <p><strong>Email:</strong> <a href="mailto:contact@ultrasigns.us">contact@ultrasigns.us</a></p>
-        <p><strong>Primary Phone:</strong> <a href="tel:+13465654050">+1 (346) 565-4050</a></p>
-        <p><strong>Secondary Phone:</strong> <a href="tel:+18327249494">+1 (832) 724-9494</a></p>
-        <p><strong>Chinese Phone:</strong> <a href="tel:+18327249543">+1 (832) 724-9543</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+18327249494">+1 (832) 724-9494</a></p>
         <p><strong>Address:</strong> 6601 Springer St., Houston, TX 77087</p>
         
         <h2>Find Us on the Map</h2>
@@ -55,6 +62,18 @@
 
     <footer>
         <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://instagram.com"><img src="MEDIA/instagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com"><img src="MEDIA/facebook.png" alt="Facebook"></a>
+            <a href="https://tiktok.com"><img src="MEDIA/tiktok.png" alt="TikTok"></a>
+        </div>
     </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
