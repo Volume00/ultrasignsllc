@@ -1,12 +1,12 @@
 /* Hero Section */
 .hero {
-    background-image: url('../MEDIA/Asset11.png');
+    background-image: url('../MEDIA/Asset11.png'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
     text-align: center;
-    padding: 20vh 5%;
+    padding: 10vh 5%; /* Reduced padding to make the hero section shorter */
     position: relative;
     z-index: 1; /* Ensure hero section is above the body */
 }
@@ -25,33 +25,26 @@
 .hero-content {
     position: relative;
     z-index: 2; /* Ensure content is above the overlay */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%; /* Ensure content takes full height of hero section */
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3rem; /* Slightly smaller font size */
     margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem; /* Slightly smaller font size */
+    margin-bottom: 1.5rem;
 }
 
 .cta-button {
     background-color: #ff3b30;
     color: white;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem; /* Smaller button */
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
-    position: relative;
-    z-index: 2; /* Ensure button is above the overlay */
 }
 
 .cta-button:hover {
@@ -60,21 +53,14 @@
 
 /* Product Categories Section */
 #product-categories {
-    display: none; /* Hide the section initially */
-    opacity: 0; /* Start fully transparent */
-    transform: translateY(20px); /* Start slightly below its final position */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+    display: grid; /* Make categories visible from the start */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 5vh 5% 10vh; /* Add extra padding at the bottom */
+    padding: 5vh 5%;
     text-align: center;
 }
 
-#product-categories.visible {
-    display: grid; /* Show the section */
-    opacity: 1; /* Make it fully visible */
-    transform: translateY(0); /* Move it to its final position */
-}
+/* Rest of your CSS remains the same */
 
 /* Category Cards */
 .category-card {
