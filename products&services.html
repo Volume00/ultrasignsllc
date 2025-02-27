@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Products & Services - Ultra Signs LLC</title>
+    <title>Products & Services | Ultra Signs LLC</title>
     <!-- Global Styles -->
     <link rel="stylesheet" href="css/global.css">
     <!-- Component-Specific Styles -->
@@ -32,14 +32,16 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Our Products & Services</h1>
             <p>Discover our wide range of high-quality LED signage solutions tailored for both commercial and domestic use.</p>
-            <a href="#product-categories" class="cta-button">View Categories</a>
+            <a href="contact.html" class="cta-button">Contact Us</a> <!-- Updated CTA button link -->
         </div>
     </section>
 
+    <!-- Product Categories Section -->
     <section id="product-categories">
         <a href="SUBLINKS/thinsignage.html" class="category-card" style="background-image: url('MEDIA/ultrasigns.jpg');">
             <h3>Thin Signage Boards</h3>
@@ -62,6 +64,7 @@
         </a>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
         <div class="social-links">
@@ -71,15 +74,9 @@
         </div>
     </footer>
 
-    <!-- Smooth Scrolling Script -->
+    <!-- JavaScript for Hamburger Menu -->
     <script>
-        // Smooth Scroll and Reveal Product Categories
-        document.querySelector('.cta-button').addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent default anchor behavior
-            const target = document.querySelector(this.getAttribute('href')); // Get the target element
-            target.classList.add('visible'); // Add the 'visible' class
-            target.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the target
-        });
+        // Hamburger Menu Toggle
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav-links').classList.toggle('active');
         });
