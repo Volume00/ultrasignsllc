@@ -1,173 +1,84 @@
-/* Hero Section */
-.hero {
-    background-image: url('../MEDIA/Asset11.png'); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    text-align: center;
-    padding: 10vh 5%; /* Reduced padding to make the hero section shorter */
-    position: relative;
-    z-index: 1; /* Ensure hero section is above the body */
+/* products.css - Specific to products page */
+
+/* Products Container */
+.products-container {
+    padding: 2rem 5%;
+    background-color: #f9f9f9;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: -1; /* Place the overlay behind the content */
+/* Section Styling */
+.products-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2; /* Ensure content is above the overlay */
-}
-
-.hero h1 {
-    font-size: 3rem; /* Slightly smaller font size */
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem; /* Slightly smaller font size */
+.products-section h2 {
+    color: #002b7f;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
-}
-
-.cta-button {
-    background-color: #ff3b30;
-    color: white;
-    padding: 0.8rem 1.5rem; /* Smaller button */
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #e23228;
-}
-
-/* Product Categories Section */
-#product-categories {
-    display: grid; /* Make categories visible from the start */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 5vh 5%;
     text-align: center;
 }
 
-/* Rest of your CSS remains the same */
-
-/* Category Cards */
-.category-card {
-    position: relative;
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-    color: white;
+/* Carousel Styling */
+.carousel {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Hide scrollbar */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 300px;
+    height: 400px;
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease;
+    position: relative;
 }
 
-.category-card:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-}
-
-/* Description Box (Initially Hidden) */
-.description-box {
-    position: absolute;
-    bottom: -100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    opacity: 0;
-    visibility: hidden;
-    transition: bottom 0.3s ease, opacity 0.3s ease;
-}
-
-/* Show Description on Hover */
-.category-card:hover .description-box {
-    bottom: 20px;
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Ensure the body and html take up the full height of the viewport */
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Make the main content area grow to fill available space */
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Ensure the footer stays at the bottom */
-footer {
-    margin-top: auto; /* Pushes the footer to the bottom */
-}
-
-/* Footer */
-footer {
-    background-color: #002b7f;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: relative; /* Change from fixed to relative */
+.carousel-item img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.social-links img {
-    height: 24px;
-    margin: 0 0.5rem;
+/* Hover Effects */
+.carousel-item:hover img {
+    transform: scale(1.05);
 }
 
-/* Responsive Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 3rem; /* Smaller font size for mobile */
+    .products-section {
+        padding: 1rem;
     }
 
-    .hero p {
-        font-size: 1.2rem; /* Smaller font size for mobile */
+    .products-section h2 {
+        font-size: 2rem;
     }
 
-    .cta-button {
-        padding: 0.8rem 1.5rem; /* Smaller button for mobile */
-        font-size: 1rem;
+    .carousel-item {
+        width: 250px;
+        height: 350px;
     }
+}
 
-    #product-categories {
-        grid-template-columns: 1fr; /* Single column for mobile */
-        padding: 5vh 5% 15vh; /* Extra padding for mobile */
-    }
-
-    .category-card {
-        height: 200px; /* Smaller cards for mobile */
-    }
-
-    .description-box {
-        width: 90%; /* Wider description box for mobile */
+@media (max-width: 480px) {
+    .carousel-item {
+        width: 200px;
+        height: 300px;
     }
 }

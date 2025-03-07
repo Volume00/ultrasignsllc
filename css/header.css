@@ -2,11 +2,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background: linear-gradient(90deg, #002b7f, #ff3b30);
     padding: 1rem;
-    border-bottom: 0.5rem solid #002b7f;
-    position: relative;
-    z-index: 1000; /* Ensure the header is above other elements */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo img {
@@ -14,38 +17,35 @@ header {
     width: auto;
 }
 
-/* Slogan Image Styling */
+/* Slogan Styling */
 .slogan {
-    flex-grow: 1; /* Allows the slogan to take up available space */
-    text-align: center; /* Centers the slogan image */
-    margin: 0 1rem; /* Adds spacing around the slogan */
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 1rem;
 }
 
 .slogan img {
-    height: auto; /* Maintains aspect ratio */
-    max-height: 100px; /* Adjust based on your design */
-    width: auto; /* Ensures the image scales proportionally */
+    max-height: 80px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.slogan img {
-    transition: transform 0.3s ease;
-}
 .slogan img:hover {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    transform: scale(1.1);
 }
 
+/* Navigation */
 .menu-toggle {
     display: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     background: none;
     border: none;
     cursor: pointer;
+    color: white;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    z-index: 1001; /* Higher than the header */
 }
 
 .nav-links li {
@@ -54,54 +54,61 @@ header {
 
 .nav-links li a {
     text-decoration: none;
-    color: #002b7f;
+    color: white;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .nav-links li a:hover {
-    background-color: #ff3b30;
-    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
 }
 
 /* Social Media Icons */
 .socialmedia {
-    height: 2vw; /* Resize social media logos */
+    height: 2vw;
+    transition: transform 0.3s;
 }
 
+.socialmedia:hover {
+    transform: rotate(10deg) scale(1.2);
+}
+
+/* Responsive Menu */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+
     }
+
     .slogan img {
-        max-height: 60px; /* Smaller for mobile devices */
+        max-height: 60px;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Adjust based on header height */
+        top: 80px;
         right: 1rem;
-        background-color: white;
-        border: 1px solid #002b7f;
+        background: white;
         border-radius: 5px;
-        z-index: 1001; /* Ensure it's above the hero section */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .nav-links.active {
         display: flex;
+        background: linear-gradient(180deg, #002b7f, #ff3b30);
     }
 
     .nav-links li {
         margin: 0.5rem 0;
     }
 
-    /* Adjust social media icons for mobile */
     .socialmedia {
-        height: 24px; /* Fixed size for mobile */
+        height: 24px;
     }
 }

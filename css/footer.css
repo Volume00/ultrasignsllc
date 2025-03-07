@@ -1,14 +1,16 @@
 footer {
     background-color: #002b7f;
+    opacity: 60%;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
     position: fixed;
     width: 100%;
     bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 5; /* Ensure content is above the overlay */
 }
 
 .social-links img {
@@ -19,7 +21,7 @@ footer {
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
-        padding: 0.5rem;
+        padding: 0.25rem;
     }
 
     .social-links {
