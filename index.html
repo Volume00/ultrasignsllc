@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS03J13FPC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SS03J13FPC');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Signs LLC - Light Up Your Business</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Meta tags and stylesheets -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Signs LLC</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
+        .hero {
+            position: relative;
+            margin-top: 100px;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 90%;
+        }
+        .glow {
+            color: #ffcc00;
+            text-shadow: 0 0 20px #ffcc00;
+        }
+        .cta-button {
+            display: inline-block;
+            position: relative; /* Ensure it stays above background */
+            z-index: 10; /* Higher than other elements */
+            padding: 15px 30px;
+            background: #ffcc00;
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+            opacity: 1 !important; /* Force opacity to 1 */
+        }
+
+        .cta-button:hover {
+            background: #ffaa00;
+            box-shadow: 0 0 20px #ffaa00;
+        }
+
+        .cta-button:focus, .cta-button:active {
+            outline: 2px solid #ffaa00;
+            box-shadow: 0 0 30px #ffaa00;
+        }
+
+        .cta-button2 {
+            display: block; /* Ensure it's a block-level element */
+            margin: 0 auto; /* Center horizontally */
+            width: fit-content; /* Constrain width to content */
+            padding: 15px 30px;
+            background: #ffcc00;
+            color: #000;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+            opacity: 1 !important;
+            margin-bottom: 15px;
+        }
+
+        .cta-button2:hover {
+            background: #ffaa00;
+            box-shadow: 0 0 20px #ffaa00;
+        }
+
+        .cta-button2:focus, .cta-button:active {
+            outline: 2px solid #ffaa00;
+            box-shadow: 0 0 30px #ffaa00;
+        }
+
+
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 0;
+            flex-wrap: wrap;
+        }
+
+        .product-showcase {
+            margin-top: 100px;
+        }
+        .product-showcase h2{
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            color: #ffcc00;
+            text-shadow: 0 0 20px #ffcc00;
+        }
+        .product-item {
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+            transition: 0.3s;
+
+            border-radius: 10%;
+        }
+        .product-item img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+        .why-choose-us {
+            text-align: center;
+            padding: 50px 20px;
+            background: #111;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .feature-item {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 300px;
+        }
+        .testimonials {
+            text-align: center;
+            padding: 50px 20px;
+            background: #111;
+        }
+        .testimonial-slider {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .testimonial-item {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            background: #222;
+            border-radius: 10px;
+        }
+        .cta {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(45deg, #ffcc00, #ff7700);
+            color: black;
+            position: relative;
+            z-index: 3;
+            padding-bottom: 80px;
+        }
+        
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .hero {
+                height: auto;
+                padding: 40px 20px;
+            }
+            .hero-content h1 {
+                font-size: 24px;
+            }
+            .cta-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+            .product-grid, .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-showcase h2{
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                color: #ffcc00;
+                text-shadow: 0 0 20px #ffcc00;
+            }
+            .product-item, .feature-item {
+                max-width: 90%;
+            }
+            .testimonial-slider {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Your existing header code -->
+        <!-- Your existing header code -->
+        <div class="logo">
+            <img src="MEDIA/US_logo.png" alt="Ultra Signs LLC Logo">
+        </div>
+        <div class="slogan">
+            <img src="MEDIA/SLOG01.png" alt="Improving Your Company's Image is Our Capability">
+        </div>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products & Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html"><img src="MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
+                <li><a href="index.html"><img src="MEDIA/facebook.png" class="socialmedia" alt="Facebook"></a></li>
+                <li><a href="index.html"><img src="MEDIA/tiktok.png" class="socialmedia" alt="TikTok"></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <video autoplay muted loop class="bg-video">
+                <source src="MEDIA/video_art.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <h1>Ultra Signs - <span class="glow">Light Up Your Business!</span></h1>
+                <a href="#products" class="cta-button">Explore Our Work</a>
+            </div>
+        </section>
+        <section id="products" class="product-showcase">
+            <h2>Our LED Signage Solutions</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="MEDIA/PARKVIEW-COFFE.png" alt="LED Sign 1">
+                    <p>Custom LED Business Sign</p>
+                </div>
+                <div class="product-item">
+                    <img src="MEDIA/ABCD.png" alt="LED Sign 2">
+                    <p>Retail Storefront Sign</p>
+                </div>
+                <div class="product-item">
+                    <img src="MEDIA/Starbucks2.png" alt="LED Sign 3">
+                    <p>Illuminated 3D Letters</p>
+                </div>
+            </div>
+            <a href="products.html" class="cta-button2">View More!</a>
+        </section>
+        <section class="testimonials">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-item">
+                    <p>"Ultra Signs transformed our storefront! The LED sign is stunning and brings in more customers."</p>
+                    <h4>- John D., Houston, TX</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Professional and fast service. Our restaurant's new sign is a game-changer!"</p>
+                    <h4>- Maria S., Austin, TX</h4>
+                </div>
+            </div>
+        </section>
+        <section class="cta">
+            <h2>Ready to Light Up Your Business?</h2>
+            <a href="contact.html" class="cta-button">Get a Quote</a>
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Your existing footer code -->
+        <!-- Your existing footer code -->
+        <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://instagram.com"><img src="MEDIA/instagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com"><img src="MEDIA/facebook.png" alt="Facebook"></a>
+            <a href="https://tiktok.com"><img src="MEDIA/tiktok.png" alt="TikTok"></a>
+        </div>
+    </footer>
+
+    <script>
+    // Animate the hero content
+    gsap.from(".hero-content h1", { opacity: 0, y: -50, duration: 1 });
+
+    // Fix for CTA buttons: Use gsap.to() instead of gsap.from()
+    gsap.to(".cta-button", { opacity: 1, scale: 1, duration: 1, delay: 0.5 });
+
+    // Animate product items
+    gsap.from(".product-item", { opacity: 0, stagger: 0.2, duration: 1, y: 30 });
+
+    // Menu toggle functionality
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
+    </script>
+</body>
+</html>

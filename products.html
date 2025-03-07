@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS03J13FPC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SS03J13FPC');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Signs LLC - Our Products</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Meta tags and stylesheets -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Signs LLC</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            text-align: center;
+        }
+        .hero {
+            margin-top: 100px;
+            padding: 50px 20px;
+            background: linear-gradient(45deg, #ffcc00, #ff7700);
+            color: #000;
+        }
+        .glow {
+            color: #ffcc00;
+            text-shadow: 0 0 20px #ffcc00;
+        }
+        .filter-section {
+            padding: 20px;
+        }
+        .filter-btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background: #ffcc00;
+            color: #000;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .filter-btn:hover {
+            background: #ffaa00;
+        }
+        #searchBar {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 10px;
+        }
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px 10px;
+        }
+        .product-item {
+            background: #222;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 300px;
+            transition: 0.3s;
+        }
+        .product-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #ffcc00;
+        }
+        .cta {
+            padding: 40px;
+            background: linear-gradient(45deg, #ffcc00, #ff7700);
+            padding-bottom: 80px;
+            color: black;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #000;
+            color: #ffcc00;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .cta-button:hover {
+            background: #222;
+            /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .hero {
+                height: auto;
+                padding: 40px 20px;
+            }
+            .hero-content h1 {
+                font-size: 24px;
+            }
+            .cta-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+            .product-grid, .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-showcase h2{
+                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                color: #ffcc00;
+                text-shadow: 0 0 20px #ffcc00;
+            }
+            .product-item, .feature-item {
+                max-width: 90%;
+            }
+            .testimonial-slider {
+                flex-direction: column;
+            }
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Your existing header code -->
+        <!-- Your existing header code -->
+        <!-- Your existing header code -->
+        <div class="logo">
+            <img src="MEDIA/US_logo.png" alt="Ultra Signs LLC Logo">
+        </div>
+        <div class="slogan">
+            <img src="MEDIA/SLOG01.png" alt="Improving Your Company's Image is Our Capability">
+        </div>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products & Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html"><img src="MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
+                <li><a href="index.html"><img src="MEDIA/facebook.png" class="socialmedia" alt="Facebook"></a></li>
+                <li><a href="index.html"><img src="MEDIA/tiktok.png" class="socialmedia" alt="TikTok"></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Find the Perfect <span class="glow">LED Sign</span> for Your Business!</h1>
+            <p>Explore our wide range of LED signage solutions designed to attract and impress.</p>
+        </section>
+
+        <section class="filter-section">
+            <input type="text" id="searchBar" placeholder="Search products..." onkeyup="filterProducts()">
+            <div class="filters">
+                <button class="filter-btn" onclick="filterCategory('all')">All</button>
+                <button class="filter-btn" onclick="filterCategory('Storefront')">Storefront</button>
+                <button class="filter-btn" onclick="filterCategory('3D')">3D</button>
+                <button class="filter-btn" onclick="filterCategory('Ultra')">Ultra</button>
+                <button class="filter-btn" onclick="filterCategory('Thin')">Thin</button>
+                <button class="filter-btn" onclick="filterCategory('Decoration')">Decoration</button>
+                <button class="filter-btn" onclick="filterCategory('Infinity')">Infinity</button>
+                <button class="filter-btn" onclick="filterCategory('Mirror')">Mirror</button>
+                <button class="filter-btn" onclick="filterCategory('Signs')">Signs</button>
+                <button class="filter-btn" onclick="filterCategory('Round')">Round</button>
+                <button class="filter-btn" onclick="filterCategory('Customizable')">Mirror</button>
+                <button class="filter-btn" onclick="filterCategory('Make_Your_Own')">Signs</button>
+            </div>
+        </section>
+
+        <section id="products" class="product-grid">
+            <div class="product-item" data-category="3D Decoration Customizable Make_Your_Own">
+                <img src="MEDIA/3D.jpg" alt="Storefront LED Sign">
+                <p>Illuminated 3D decoration</p>
+            </div>
+            <div class="product-item" data-category="Ultra Thin Decoration Customizable Make_Your_Own">
+                <img src="MEDIA/nba.png" alt="3D Letter Sign">
+                <p>Customizable indoor lightweight LED decoration</p>
+            </div>
+            <div class="product-item" data-category="Storefront Ultra Thin Signs Round Customizable Make_Your_Own">
+                <img src="MEDIA/Starbucks2.png" alt="Custom LED Sign">
+                <p>Customizable in/outdoor ultra thin led Sign!</p>
+            </div>
+            <div class="product-item" data-category="Ultra Thin Decoration Customizable Make_Your_Own">
+                <img src="MEDIA/hbd-blue.jpg" alt="Storefront LED Sign">
+                <p>Customizable Celebration Ultra Thin Signs</p>
+            </div>
+            <div class="product-item" data-category="Ultra Thin Decoration Customizable Make_Your_Own">
+                <img src="MEDIA/hbd-red.jpg" alt="3D Letter Sign">
+                <p>Customizable Celebration Ultra Thin Signs</p>
+            </div>
+            <div class="product-item" data-category="Infinity Mirror Customizable Make_Your_Own 3D">
+                <img src="MEDIA/ABCD.png" alt="Custom LED Sign">
+                <p>Infinity Mirror 3D Characters (ABCD)</p>
+            </div>
+            <div class="product-item" data-category="Storefront Customizable Make_Your_Own">
+                <img src="MEDIA/PARKVIEW-COFFE.png" alt="Storefront LED Sign">
+                <p>Park View Coffee Sign (blue)</p>
+            </div>
+            <div class="product-item" data-category="Customizable Make_Your_Own">
+                <img src="MEDIA/damian.png" alt="3D Letter Sign">
+                <p>Customizable Sign</p>
+            </div>
+            <div class="product-item" data-category="Storefront Customizable Make_Your_Own">
+                <img src="MEDIA/PV-RED.png" alt="Custom LED Sign">
+                <p>Park View Coffee Sign (red)</p>
+            </div>
+            <div class="product-item" data-category="3D Decoration Customizable Make_Your_Own">
+                <img src="MEDIA/3d2.jpg" alt="Custom LED Sign">
+                <p>LA (Lumin Art) Logo - With customized design!</p>
+            </div>
+        </section>
+    
+        <section class="cta">
+            <h2>Need a Custom LED Sign?</h2>
+            <a href="contact.html" class="cta-button">Get a Free Quote</a>
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Your existing footer code -->
+        <!-- Your existing footer code -->
+        <!-- Your existing footer code -->
+        <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://instagram.com"><img src="MEDIA/instagram.png" alt="Instagram"></a>
+            <a href="https://facebook.com"><img src="MEDIA/facebook.png" alt="Facebook"></a>
+            <a href="https://tiktok.com"><img src="MEDIA/tiktok.png" alt="TikTok"></a>
+        </div>
+    </footer>
+
+    <script>
+        // Animate the hero content
+        gsap.from(".hero h1", { opacity: 0, y: -30, duration: 1 });
+
+        // Fix for product items: Use gsap.to() instead of gsap.from()
+        gsap.to(".product-item", { opacity: 1, y: 0, stagger: 0.2, duration: 1 });
+
+        // Filter functionality
+        function filterProducts() {
+            let input = document.getElementById('searchBar').value.toLowerCase();
+            let items = document.querySelectorAll('.product-item');
+            items.forEach(item => {
+                let text = item.textContent.toLowerCase();
+                item.style.display = text.includes(input) ? 'block' : 'none';
+            });
+        }
+
+        function filterCategory(category) {
+            let items = document.querySelectorAll('.product-item');
+
+            items.forEach(item => {
+                let categories = item.getAttribute('data-category').toLowerCase().split(" ");
+                if (category === 'all' || categories.includes(category.toLowerCase())) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+
+        // Menu toggle functionality
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
