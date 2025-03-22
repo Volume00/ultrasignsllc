@@ -78,14 +78,10 @@ header {
 }
 
 /* Responsive Menu */
+/* Hamburger menu styling */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
-
-    }
-
-    .slogan img {
-        max-height: 60px;
     }
 
     .nav-links {
@@ -97,6 +93,8 @@ header {
         background: white;
         border-radius: 5px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        align-items: center; /* Center items */
     }
 
     .nav-links.active {
@@ -106,9 +104,61 @@ header {
 
     .nav-links li {
         margin: 0.5rem 0;
+        text-align: center;
     }
 
+    /* Style for the cart button inside the menu */
+    .cart-menu-item {
+        margin-top: 10px;
+    }
+
+    .cart-menu-item .snipcart-checkout {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Custom Cart Icon */
+    .cart-menu-item .cart-icon {
+        width: 35px; /* Adjust size */
+        height: auto;
+        transition: transform 0.2s ease-in-out; /* Smooth effect */
+        padding-bottom: 20px;
+    }
+
+    /* Hover Effect */
+    .cart-menu-item .snipcart-checkout:hover .cart-icon {
+        transform: scale(1.1); /* Slight zoom effect */
+    }
     .socialmedia {
         height: 24px;
     }
+}
+
+
+/* View Cart Button Styling */
+.snipcart-checkout {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Custom Cart Icon */
+.cart-icon {
+    width: 30px;  /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.2s ease-in-out; /* Smooth effect */
+}
+
+/* Hover Effect */
+.snipcart-checkout:hover .cart-icon {
+    transform: scale(1.1); /* Slight zoom effect */
 }
