@@ -9,6 +9,15 @@
       gtag('js', new Date());
       gtag('config', 'G-SS03J13FPC');
     </script>
+    <!-- Snipcart Configuration -->
+    <script>
+        window.SnipcartSettings = {
+            publicApiKey: 'ZmQ2OWZmYzMtOTc0NC00NzFiLWJmOTQtM2I3NDRlYTJlZmFkNjM4Nzc4MjgyMDcwMDc2Nzg1',
+            loadStrategy: 'on-user-interaction',
+        };
+
+        (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -149,9 +158,9 @@
                 <li><a href="products.html">Products & Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="index.html"><img src="MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
-                <li><a href="index.html"><img src="MEDIA/facebook.png" class="socialmedia" alt="Facebook"></a></li>
-                <li><a href="index.html"><img src="MEDIA/tiktok.png" class="socialmedia" alt="TikTok"></a></li>
+                <li><a href="https://www.instagram.com/ultrasignsllc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61573925590591"><img src="MEDIA/facebook.png" class="socialmedia" alt="Facebook"></a></li>
+                <li><a href="https://www.tiktok.com/@ultrasignsllc?is_from_webapp=1&sender_device=pc"><img src="MEDIA/tiktok.png" class="socialmedia" alt="TikTok"></a></li>
             </ul>
         </nav>
     </header>
@@ -187,7 +196,14 @@
     </section>
 
     <footer>
+        <!-- Your existing footer code -->
+        <!-- Your existing footer code -->
         <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/ultrasignsllc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="MEDIA/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/profile.php?id=61573925590591"><img src="MEDIA/facebook.png" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@ultrasignsllc?is_from_webapp=1&sender_device=pc"><img src="MEDIA/tiktok.png" alt="TikTok"></a>
+        </div>
     </footer>
 
     <script>
