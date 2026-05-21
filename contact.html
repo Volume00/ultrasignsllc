@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS03J13FPC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -9,155 +9,269 @@
       gtag('js', new Date());
       gtag('config', 'G-SS03J13FPC');
     </script>
-    <!-- Snipcart Configuration -->
+    <!-- Snipcart -->
     <script>
         window.SnipcartSettings = {
             publicApiKey: 'ZmQ2OWZmYzMtOTc0NC00NzFiLWJmOTQtM2I3NDRlYTJlZmFkNjM4Nzc4MjgyMDcwMDc2Nzg1',
             loadStrategy: 'on-user-interaction',
         };
-
         (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Contact Ultra Signs LLC — Custom LED signage in Houston, TX. Get a free quote today.">
     <title>Contact Us | Ultra Signs LLC</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-    <title>Ultra Signs LLC</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/home.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #000;
-            color: #fff;
+        /* ── Page hero ────────────────────────────────── */
+        .page-hero {
+            margin-top: var(--header-height);
+            padding: 5rem 1.5rem 4rem;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
             text-align: center;
         }
-        .contact-hero {
-            margin-top: 100px;
-            padding: 50px 20px;
-            background: linear-gradient(45deg, #ffcc00, #ff7700);
-            color: #000;
+
+        .page-hero .eyebrow {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
         }
-        .contact-hero h1 {
-            font-size: 3rem;
+
+        .page-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.9rem;
         }
-        .contact-hero p {
-            font-size: 1.2rem;
+
+        .page-hero p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto;
+            font-weight: 300;
         }
-        .contact-details {
-            padding: 50px 20px;
+
+        /* ── Contact layout ───────────────────────────── */
+        .contact-section {
+            padding: 6rem 1.5rem;
         }
-        .contact-details h2 {
-            font-size: 2rem;
-            color: #ffcc00;
+
+        .contact-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 5rem;
+            align-items: start;
         }
-        .contact-details p, .contact-details a {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 20px;
+
+        /* ── Info cards ───────────────────────────────── */
+        .contact-info h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+
+        .info-card {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: border-color var(--transition), box-shadow var(--transition);
+        }
+
+        .info-card:hover {
+            border-color: var(--border);
+            box-shadow: 0 4px 20px rgba(255,204,0,0.07);
+        }
+
+        .info-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .info-card-text h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            margin-bottom: 0.4rem;
+        }
+
+        .info-card-text p,
+        .info-card-text a {
+            font-size: 0.92rem;
+            color: #bbb;
+            text-decoration: none;
             line-height: 1.6;
-            color: #ffcc00;
-            text-decoration: none;
+            display: block;
+            transition: color var(--transition);
         }
-        .contact-details a:hover {
-            text-decoration: underline;
+
+        .info-card-text a:hover {
+            color: var(--gold);
         }
-        .map-container {
-            padding: 20px;
-            margin-bottom: 20px;
+
+        /* ── Contact form ─────────────────────────────── */
+        .contact-form-wrap h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-bottom: 2rem;
         }
-        .cta {
-            padding: 40px;
-            background: linear-gradient(45deg, #ffcc00, #ff7700);
-            color: black;
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
         }
-        .cta-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #000;
-            color: #ffcc00;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: 0.3s;
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.1rem;
         }
-        .cta-button:hover {
-            background: #222;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
         }
-        .map-container {
-            padding: 20px;
-            margin-bottom: 20px;
+
+        .form-group label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #888;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 13px 16px;
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            transition: border-color var(--transition);
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .form-group select option {
+            background: var(--card);
+        }
+
+        .form-submit {
+            margin-top: 0.5rem;
+        }
+
+        .form-note {
+            font-size: 0.78rem;
+            color: #555;
+            margin-top: 0.75rem;
+        }
+
+        /* ── Map ──────────────────────────────────────── */
+        .map-section {
+            padding: 0 1.5rem 6rem;
+        }
+
+        .map-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 2rem;
         }
 
         .map-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
             position: relative;
             overflow: hidden;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio (height = 56.25% of width) */
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            padding-top: 42%;
         }
 
         .map-wrapper iframe {
             position: absolute;
-            top: 0;
-            left: 0;
+            inset: 0;
             width: 100%;
             height: 100%;
             border: 0;
         }
-        /* Responsive Styles */
-        @media screen and (max-width: 768px) {
-            .hero {
-                height: auto;
-                padding: 40px 20px;
+
+        /* ── Responsive ───────────────────────────────── */
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
             }
-            .hero-content h1 {
-                font-size: 24px;
-            }
-            .cta-button {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-            .product-grid, .features {
-                flex-direction: column;
-                align-items: center;
-            }
-            .product-showcase h2{
-                font-size: 20px;
-                display: flex;
-                justify-content: center;
-                color: #ffcc00;
-                text-shadow: 0 0 20px #ffcc00;
-            }
-            .product-item, .feature-item {
-                max-width: 90%;
-            }
-            .testimonial-slider {
-                flex-direction: column;
-            }
+            .map-wrapper { padding-top: 60%; }
+        }
+
+        @media (max-width: 560px) {
+            .form-row { grid-template-columns: 1fr; }
+            .map-wrapper { padding-top: 75%; }
         }
     </style>
 </head>
 <body>
     <header>
-        <!-- Your existing header code -->
-        <!-- Your existing header code -->
-        <!-- Your existing header code -->
         <div class="logo">
-            <img src="MEDIA/US_logo.png" alt="Ultra Signs LLC Logo">
-            <img src="MEDIA/Luminart_logo.png" alt="Lumin Art LLC Logo">
+            <img src="MEDIA/US_logo.png" alt="Ultra Signs LLC">
+            <img src="MEDIA/Luminart_logo.png" alt="Luminart LLC">
         </div>
         <nav>
             <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="products.html">Products & Services</a></li>
+                <li><a href="products.html">Products &amp; Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="https://www.instagram.com/ultrasignsllc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
@@ -167,51 +281,169 @@
         </nav>
     </header>
 
-    <section class="contact-hero">
-        <div class="hero-content">
-            <h1>Contact Us</h1>
-            <p>We're here to assist you with all your LED signage needs!</p>
-        </div>
-    </section>
+    <main>
+        <section class="page-hero">
+            <p class="eyebrow">Houston, TX</p>
+            <h1>Get in Touch</h1>
+            <p>Have a project in mind? We'd love to hear about it. Reach out and get a free quote.</p>
+        </section>
 
-    <section class="contact-details">
-        <h2>Get In Touch</h2>
-        <p><strong>Email:</strong> <a href="mailto:contact@ultrasigns.us">contact@ultrasigns.us</a></p>
-        <p><strong>Chen Lei/陈磊:</strong> <a href="tel:+18327249543">+1 (832) 724-9543</a></p>
-        <p><strong>Address:</strong> 536 Memorial City Mall, Houston, TX 77024</p>
-    </section>
+        <section class="contact-section">
+            <div class="contact-grid">
 
-    <section class="map-container">
-        <h2>Find Us on the Map</h2>
-        <div class="map-wrapper">
-            <!-- Embed Google Maps iframe -->
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.1693181088794!2d-95.5353511245239!3d29.78076907505407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640dc859d5a8f21%3A0x6dc7c2a2f2e0f6a2!2s536%20Memorial%20City%20Mall%2C%20Houston%2C%20TX%2077024%2C%20USA!5e0!3m2!1sen!2sus!4v1721125840000!5m2!1sen!2sus" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-    </section>
+                <!-- Info cards -->
+                <div class="contact-info reveal-left">
+                    <h2>Contact Info</h2>
+
+                    <div class="info-card">
+                        <div class="info-icon">&#9993;</div>
+                        <div class="info-card-text">
+                            <h3>Email</h3>
+                            <a href="mailto:contact@ultrasigns.us">contact@ultrasigns.us</a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">&#9742;</div>
+                        <div class="info-card-text">
+                            <h3>Phone</h3>
+                            <a href="tel:+18327249543">+1 (832) 724-9543</a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">&#9873;</div>
+                        <div class="info-card-text">
+                            <h3>Address</h3>
+                            <p>536 Memorial City Mall<br>Houston, TX 77024</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">&#9728;</div>
+                        <div class="info-card-text">
+                            <h3>Hours</h3>
+                            <p>Mon – Fri: 9 AM – 6 PM<br>Sat: 10 AM – 4 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact form -->
+                <div class="contact-form-wrap reveal">
+                    <h2>Send a Message</h2>
+                    <form class="contact-form" action="mailto:contact@ultrasigns.us" method="post" enctype="text/plain" onsubmit="return handleSubmit()">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="First Name" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="Last Name" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="Email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone (optional)</label>
+                                <input type="tel" id="phone" name="Phone" placeholder="+1 (555) 000-0000">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="Service">
+                                <option value="">Select a category...</option>
+                                <option>Storefront Sign</option>
+                                <option>3D LED Letters</option>
+                                <option>Infinity Mirror Sign</option>
+                                <option>Ultra-Thin LED Sign</option>
+                                <option>Engraved Backlit Sign</option>
+                                <option>Custom / Make Your Own</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="Message" placeholder="Tell us about your project — size, colors, deadline, or any other details..." required></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+                            <p class="form-note">This will open your email client. For a faster reply, call us directly at <a href="tel:+18327249543" style="color:var(--gold);">+1 (832) 724-9543</a>.</p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Map -->
+        <section class="map-section">
+            <h2 class="reveal">Find Us on the Map</h2>
+            <div class="map-wrapper reveal" style="transition-delay:.1s">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3477.1693181088794!2d-95.5353511245239!3d29.78076907505407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640dc859d5a8f21%3A0x6dc7c2a2f2e0f6a2!2s536%20Memorial%20City%20Mall%2C%20Houston%2C%20TX%2077024%2C%20USA!5e0!3m2!1sen!2sus!4v1721125840000!5m2!1sen!2sus"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <!-- Your existing footer code -->
-        <!-- Your existing footer code -->
-        <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/ultrasignsllc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="MEDIA/instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/profile.php?id=61573925590591"><img src="MEDIA/facebook.png" alt="Facebook"></a>
-            <a href="https://www.tiktok.com/@ultrasignsllc?is_from_webapp=1&sender_device=pc"><img src="MEDIA/tiktok.png" alt="TikTok"></a>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img class="footer-logo" src="MEDIA/US_logo.png" alt="Ultra Signs LLC">
+                <p>Premium custom LED signage for businesses &amp; spaces in Houston, TX. We bring your brand to life.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="products.html">Products &amp; Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <address>
+                    536 Memorial City Mall<br>
+                    Houston, TX 77024<br>
+                    <a href="tel:+18327249543">+1 (832) 724-9543</a><br>
+                    <a href="mailto:contact@ultrasigns.us">contact@ultrasigns.us</a>
+                </address>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/ultrasignsllc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="MEDIA/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61573925590591"><img src="MEDIA/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.tiktok.com/@ultrasignsllc?is_from_webapp=1&sender_device=pc"><img src="MEDIA/tiktok.png" alt="TikTok"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ultra Signs LLC. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
         });
-        gsap.from(".contact-hero h1", { opacity: 0, y: -30, duration: 1 });
-        gsap.from(".contact-details h2", { opacity: 0, stagger: 0.3, duration: 1, y: 20 });
+
+        gsap.from(".page-hero h1", { opacity: 0, y: -25, duration: 1 });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal, .reveal-left').forEach(el => observer.observe(el));
+
+        function handleSubmit() {
+            return true;
+        }
     </script>
 </body>
 </html>

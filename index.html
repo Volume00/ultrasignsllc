@@ -1,254 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS03J13FPC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-SS03J13FPC');
     </script>
-    <!-- Snipcart Configuration -->
+    <!-- Snipcart -->
     <script>
         window.SnipcartSettings = {
             publicApiKey: 'ZmQ2OWZmYzMtOTc0NC00NzFiLWJmOTQtM2I3NDRlYTJlZmFkNjM4Nzc4MjgyMDcwMDc2Nzg1',
             loadStrategy: 'on-user-interaction',
         };
-
         (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultra Signs LLC - Light Up Your Business</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <!-- Meta tags and stylesheets -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultra Signs LLC</title>
+    <meta name="description" content="Ultra Signs LLC — Premium custom LED signage for businesses and spaces in Houston, TX. Storefront signs, 3D letters, infinity mirrors & more.">
+    <title>Ultra Signs LLC — Light Up Your Business</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #000;
-            color: #fff;
-        }
+        /* ── Hero ─────────────────────────────────────── */
         .hero {
             position: relative;
-            margin-top: 100px;
-            height: 100vh;
+            margin-top: var(--header-height);
+            height: calc(100vh - var(--header-height));
+            min-height: 520px;
             overflow: hidden;
-            text-align: center;
             display: flex;
-            justify-content: center;
             align-items: center;
-            padding: 20px;
+            justify-content: center;
+            text-align: center;
         }
+
         .bg-video {
             position: absolute;
-            top: 0;
-            left: 0;
+            inset: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1;
+            z-index: 0;
         }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.55) 0%,
+                rgba(0,0,0,0.35) 50%,
+                rgba(0,0,0,0.72) 100%
+            );
+            z-index: 1;
+        }
+
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 90%;
-        }
-        .hero-content h1{
-            font-size: 80px;
-        }
-        .glow {
-            color: #ffcc00;
-            text-shadow: 0 0 20px #ffcc00;
-        }
-        .cta-button {
-            display: inline-block;
-            position: relative; /* Ensure it stays above background */
-            z-index: 10; /* Higher than other elements */
-            padding: 15px 30px;
-            background: #ffcc00;
-            color: #000;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: 0.3s;
-            opacity: 1 !important; /* Force opacity to 1 */
+            max-width: 860px;
+            padding: 0 1.5rem;
         }
 
-        .cta-button:hover {
-            background: #ffaa00;
-            box-shadow: 0 0 20px #ffaa00;
+        .hero-eyebrow {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.25rem;
+            opacity: 0.9;
         }
 
-        .cta-button:focus, .cta-button:active {
-            outline: 2px solid #ffaa00;
-            box-shadow: 0 0 30px #ffaa00;
+        .hero-content h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.4rem, 7vw, 5.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.25rem;
         }
 
-        .cta-button2 {
-            display: block; /* Ensure it's a block-level element */
-            margin: 0 auto; /* Center horizontally */
-            width: fit-content; /* Constrain width to content */
-            padding: 15px 30px;
-            background: #ffcc00;
-            color: #000;
-            font-size: 30px;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: 0.3s;
-            opacity: 1 !important;
-            margin-bottom: 15px;
+        .hero-subtitle {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2.5rem;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .cta-button2:hover {
-            background: #ffaa00;
-            box-shadow: 0 0 20px #ffaa00;
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .cta-button2:focus, .cta-button:active {
-            outline: 2px solid #ffaa00;
-            box-shadow: 0 0 30px #ffaa00;
+        /* ── Stats bar ────────────────────────────────── */
+        .stats-bar {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2.5rem 1rem;
         }
 
+        .stats-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        .stat-number {
+            display: block;
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(255, 204, 0, 0.35);
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+        }
+
+        /* ── Featured products ────────────────────────── */
+        .featured-section {
+            padding: 6rem 1.5rem;
+        }
 
         .product-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 50px 0;
-            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
         }
 
-        .product-showcase {
-            margin-top: 100px;
+        .product-card {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
         }
-        .product-showcase h2{
-            font-size: 40px;
-            display: flex;
-            justify-content: center;
-            color: #ffcc00;
-            text-shadow: 0 0 20px #ffcc00;
-        }
-        .product-item {
-            text-align: center;
-            width: 100%;
-            max-width: 300px;
-        }
-        .product-item img {
-            width: 100%;
-            height: auto;
-            transition: 0.3s;
 
-            border-radius: 10%;
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 40px rgba(255, 204, 0, 0.15);
+            border-color: rgba(255, 204, 0, 0.25);
         }
-        .product-item img:hover {
-            transform: scale(1.1);
-            filter: brightness(1.2);
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
         }
-        .why-choose-us {
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-card-body {
+            padding: 1.25rem 1.5rem;
+        }
+
+        .product-card-body h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-card-body p {
+            font-size: 0.87rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* ── Process ──────────────────────────────────── */
+        .process-section {
+            background: var(--surface);
+            padding: 6rem 1.5rem;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .process-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .process-step {
             text-align: center;
-            padding: 50px 20px;
-            background: #111;
         }
-        .features {
+
+        .step-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--gold-dim);
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(255, 204, 0, 0.1);
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .feature-item {
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 300px;
-        }
-        .testimonials {
-            text-align: center;
-            padding: 50px 20px;
-            background: #111;
-        }
-        .testimonial-slider {
-            display: flex;
-            flex-direction: column;
             align-items: center;
-            gap: 20px;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+            color: var(--gold);
+            font-size: 1.6rem;
         }
-        .testimonial-item {
-            width: 100%;
-            max-width: 500px;
-            padding: 20px;
-            background: #222;
-            border-radius: 10px;
+
+        .process-step h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text);
+            margin-bottom: 0.75rem;
         }
-        .cta {
-            text-align: center;
-            padding: 50px;
-            background: linear-gradient(45deg, #ffcc00, #ff7700);
-            color: black;
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ── Testimonials ─────────────────────────────── */
+        .testimonials-section {
+            padding: 6rem 1.5rem;
+        }
+
+        .testimonials-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
             position: relative;
-            z-index: 3;
-            padding-bottom: 80px;
         }
-        
-        /* Responsive Styles */
-        @media screen and (max-width: 768px) {
-            .hero {
-                height: auto;
-                padding: 40px 20px;
-            }
-            .hero-content h1 {
-                font-size: 24px;
-            }
-            .cta-button {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-            .product-grid, .features {
-                flex-direction: column;
-                align-items: center;
-            }
-            .product-showcase h2{
-                font-size: 20px;
-                display: flex;
-                justify-content: center;
-                color: #ffcc00;
-                text-shadow: 0 0 20px #ffcc00;
-            }
-            .product-item, .feature-item {
-                max-width: 90%;
-            }
-            .testimonial-slider {
-                flex-direction: column;
-            }
+
+        .testimonial-card::before {
+            content: '\201C';
+            font-size: 5rem;
+            line-height: 0.7;
+            color: var(--gold);
+            opacity: 0.25;
+            position: absolute;
+            top: 1.25rem;
+            left: 1.5rem;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-card p {
+            font-size: 0.95rem;
+            color: #ccc;
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+            padding-top: 1.5rem;
+        }
+
+        .testimonial-card h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+        }
+
+        /* ── CTA band ─────────────────────────────────── */
+        .cta-band {
+            background: linear-gradient(135deg, #1a1200 0%, #0a0a0a 40%, #1a0a00 100%);
+            border-top: 1px solid var(--border);
+            padding: 6rem 1.5rem;
+            text-align: center;
+        }
+
+        .cta-band h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .cta-band p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ── Responsive ───────────────────────────────── */
+        @media (max-width: 900px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 560px) {
+            .product-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
     <header>
-        <!-- Your existing header code -->
-        <!-- Your existing header code -->
         <div class="logo">
-            <img src="MEDIA/US_logo.png" alt="Ultra Signs LLC Logo">
-            <img src="MEDIA/Luminart_logo.png" alt="Lumin Art LLC Logo">
+            <img src="MEDIA/US_logo.png" alt="Ultra Signs LLC">
+            <img src="MEDIA/Luminart_logo.png" alt="Luminart LLC">
         </div>
         <nav>
             <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="products.html">Products & Services</a></li>
+                <li><a href="products.html">Products &amp; Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="https://www.instagram.com/ultrasignsllc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
@@ -257,79 +365,190 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
+        <!-- Hero -->
         <section class="hero">
-            <video autoplay muted loop class="bg-video">
+            <video autoplay muted loop playsinline class="bg-video">
                 <source src="MEDIA/video_art.mp4" type="video/mp4">
             </video>
+            <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1>Ultra Signs - <span class="glow">Light Up Your Business!</span></h1>
-                <a href="#products" class="cta-button">Explore Our Work</a>
+                <p class="hero-eyebrow">Houston, TX &mdash; Custom LED Signage</p>
+                <h1>Ultra Signs &mdash; <span class="glow">Light Up Your Business!</span></h1>
+                <p class="hero-subtitle">Premium LED signs crafted for storefronts, brands &amp; spaces that demand attention.</p>
+                <div class="hero-actions">
+                    <a href="products.html" class="btn btn-primary">Explore Our Work</a>
+                    <a href="contact.html" class="btn btn-outline">Get a Free Quote</a>
+                </div>
             </div>
         </section>
-        <section id="products" class="product-showcase">
-            <h2>Our LED Signage Solutions</h2>
+
+        <!-- Stats bar -->
+        <section class="stats-bar">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">Signs Delivered</span>
+                </div>
+                <div class="stat-item reveal" style="transition-delay:.1s">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-item reveal" style="transition-delay:.2s">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item reveal" style="transition-delay:.3s">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Custom Made</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured products -->
+        <section id="products" class="featured-section">
+            <div class="section-header reveal">
+                <h2 class="section-title">Our LED Signage Solutions</h2>
+                <p class="section-subtitle">From storefront signs to custom art installations</p>
+            </div>
             <div class="product-grid">
-                <div class="product-item">
-                    <img src="MEDIA/PARKVIEW-COFFE.png" alt="LED Sign 1">
-                    <p>Custom LED Business Sign</p>
+                <div class="product-card reveal">
+                    <img src="MEDIA/PARKVIEW-COFFE.png" alt="Custom LED Business Sign">
+                    <div class="product-card-body">
+                        <h3>Custom Business Sign</h3>
+                        <p>Eye-catching LED signs tailored to your brand identity and storefront dimensions.</p>
+                    </div>
                 </div>
-                <div class="product-item">
-                    <img src="MEDIA/ABCD.png" alt="LED Sign 2">
-                    <p>Retail Storefront Sign</p>
+                <div class="product-card reveal" style="transition-delay:.1s">
+                    <img src="MEDIA/ABCD.png" alt="Infinity Mirror Letters">
+                    <div class="product-card-body">
+                        <h3>Infinity Mirror Letters</h3>
+                        <p>Stunning depth illusion signs with fully customizable fonts, frames, and LED colors.</p>
+                    </div>
                 </div>
-                <div class="product-item">
-                    <img src="MEDIA/Starbucks2.png" alt="LED Sign 3">
-                    <p>Illuminated 3D Letters</p>
-                </div>
-            </div>
-            <a href="products.html" class="cta-button2">View More!</a>
-        </section>
-        <section class="testimonials">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial-item">
-                    <p>"Ultra Signs transformed our storefront! The LED sign is stunning and brings in more customers."</p>
-                    <h4>- John D., Houston, TX</h4>
-                </div>
-                <div class="testimonial-item">
-                    <p>"Professional and fast service. Our restaurant's new sign is a game-changer!"</p>
-                    <h4>- Maria S., Austin, TX</h4>
+                <div class="product-card reveal" style="transition-delay:.2s">
+                    <img src="MEDIA/Starbucks2.png" alt="Engraved Backlit Sign">
+                    <div class="product-card-body">
+                        <h3>Engraved Backlit Sign</h3>
+                        <p>Sleek, minimalist engraved mirror signs with a refined backlit glow for premium spaces.</p>
+                    </div>
                 </div>
             </div>
+            <div class="text-center reveal" style="margin-top: 3rem;">
+                <a href="products.html" class="btn btn-primary">View All Products</a>
+            </div>
         </section>
-        <section class="cta">
-            <h2>Ready to Light Up Your Business?</h2>
-            <a href="contact.html" class="cta-button">Get a Quote</a>
+
+        <!-- How it works -->
+        <section class="process-section">
+            <div class="section-header reveal">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">From concept to installation in three simple steps</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step reveal">
+                    <div class="step-number">01</div>
+                    <h3>Design</h3>
+                    <p>Share your vision, logo, or idea. We create a custom design proof tailored exactly to you.</p>
+                </div>
+                <div class="process-step reveal" style="transition-delay:.15s">
+                    <div class="step-number">02</div>
+                    <h3>Craft</h3>
+                    <p>We build your sign using premium materials and precision LED technology for lasting brilliance.</p>
+                </div>
+                <div class="process-step reveal" style="transition-delay:.3s">
+                    <div class="step-number">03</div>
+                    <h3>Install</h3>
+                    <p>Professional on-site installation ensures your sign shines perfectly from day one.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="section-header reveal">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real businesses, real results</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <p>"Ultra Signs transformed our storefront completely. The LED sign is stunning — we get compliments from customers every single day."</p>
+                    <h4>— John D., Houston, TX</h4>
+                </div>
+                <div class="testimonial-card reveal" style="transition-delay:.15s">
+                    <p>"Professional, fast, and the final result exceeded our expectations. Our restaurant's new sign has become a real landmark."</p>
+                    <h4>— Maria S., Austin, TX</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA band -->
+        <section class="cta-band">
+            <h2 class="reveal">Ready to <span class="glow">Light Up</span> Your Business?</h2>
+            <p class="reveal" style="transition-delay:.1s">Get a free quote today and let's create something spectacular together.</p>
+            <a href="contact.html" class="btn btn-primary reveal" style="transition-delay:.2s">Get a Free Quote</a>
         </section>
     </main>
-    
+
     <footer>
-        <!-- Your existing footer code -->
-        <!-- Your existing footer code -->
-        <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/ultrasignsllc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="MEDIA/instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/profile.php?id=61573925590591"><img src="MEDIA/facebook.png" alt="Facebook"></a>
-            <a href="https://www.tiktok.com/@ultrasignsllc?is_from_webapp=1&sender_device=pc"><img src="MEDIA/tiktok.png" alt="TikTok"></a>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img class="footer-logo" src="MEDIA/US_logo.png" alt="Ultra Signs LLC">
+                <p>Premium custom LED signage for businesses &amp; spaces in Houston, TX. We bring your brand to life.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="products.html">Products &amp; Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <address>
+                    536 Memorial City Mall<br>
+                    Houston, TX 77024<br>
+                    <a href="tel:+18327249543">+1 (832) 724-9543</a><br>
+                    <a href="mailto:contact@ultrasigns.us">contact@ultrasigns.us</a>
+                </address>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/ultrasignsllc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="MEDIA/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61573925590591"><img src="MEDIA/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.tiktok.com/@ultrasignsllc?is_from_webapp=1&sender_device=pc"><img src="MEDIA/tiktok.png" alt="TikTok"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ultra Signs LLC. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-    // Animate the hero content
-    gsap.from(".hero-content h1", { opacity: 0, y: -50, duration: 1 });
+        // Menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
 
-    // Fix for CTA buttons: Use gsap.to() instead of gsap.from()
-    gsap.to(".cta-button", { opacity: 1, scale: 1, duration: 1, delay: 0.5 });
+        // GSAP hero entrance
+        gsap.from(".hero-eyebrow", { opacity: 0, y: -20, duration: 0.8, delay: 0.2 });
+        gsap.from(".hero-content h1", { opacity: 0, y: -30, duration: 1, delay: 0.4 });
+        gsap.from(".hero-subtitle", { opacity: 0, y: 20, duration: 0.8, delay: 0.7 });
+        gsap.from(".hero-actions", { opacity: 0, y: 20, duration: 0.8, delay: 0.95 });
 
-    // Animate product items
-    gsap.from(".product-item", { opacity: 0, stagger: 0.2, duration: 1, y: 30 });
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12 });
 
-    // Menu toggle functionality
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('.nav-links').classList.toggle('active');
-    });
+        document.querySelectorAll('.reveal, .reveal-left').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>

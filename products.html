@@ -1,226 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SS03J13FPC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-SS03J13FPC');
     </script>
-    <!-- Snipcart Configuration -->
+    <!-- Snipcart -->
     <script>
         window.SnipcartSettings = {
             publicApiKey: 'ZmQ2OWZmYzMtOTc0NC00NzFiLWJmOTQtM2I3NDRlYTJlZmFkNjM4Nzc4MjgyMDcwMDc2Nzg1',
             loadStrategy: 'on-user-interaction',
         };
-
         (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultra Signs LLC - Our Products</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <!-- Meta tags and stylesheets -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultra Signs LLC</title>
+    <meta name="description" content="Ultra Signs LLC — Browse our full catalog of custom LED signs for businesses and homes.">
+    <title>Products &amp; Services | Ultra Signs LLC</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/snipcart.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #000;
-            color: #fff;
+        /* ── Page hero ────────────────────────────────── */
+        .page-hero {
+            margin-top: var(--header-height);
+            padding: 5rem 1.5rem 4rem;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
             text-align: center;
         }
-        .hero {
-            margin-top: 100px;
-            padding: 50px 20px;
-            background: linear-gradient(45deg, #ffcc00, #ff7700);
-            color: #000;
+
+        .page-hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.9rem;
         }
-        .glow {
-            color: #ffcc00;
-            text-shadow: 0 0 20px #ffcc00;
+
+        .page-hero p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin: 0 auto;
+            font-weight: 300;
         }
+
+        /* ── Filter section ───────────────────────────── */
         .filter-section {
-            padding: 20px;
+            padding: 2.5rem 1.5rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
         }
-        .filter-btn {
-            padding: 10px 20px;
-            margin: 5px;
-            border: none;
-            background: #ffcc00;
-            color: #000;
-            cursor: pointer;
-            border-radius: 5px;
+
+        .search-wrap {
+            margin-bottom: 1.25rem;
         }
-        .filter-btn:hover {
-            background: #ffaa00;
-        }
+
         #searchBar {
-            padding: 10px;
-            width: 80%;
-            max-width: 400px;
-            margin-bottom: 10px;
+            padding: 12px 18px;
+            width: 100%;
+            max-width: 420px;
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            transition: border-color var(--transition);
         }
-        .product-grid {
+
+        #searchBar:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        #searchBar::placeholder {
+            color: #555;
+        }
+
+        .filters {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
-            padding: 30px 10px;
+            justify-content: center;
+            gap: 0.5rem;
         }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: #aaa;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: background var(--transition), color var(--transition), border-color var(--transition);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+        }
+
+        /* ── Product grid ─────────────────────────────── */
+        .products-section {
+            padding: 3rem 1.5rem 6rem;
+        }
+
+        .product-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.75rem;
+        }
+
         .product-item {
-            background: #222;
-            padding: 15px;
-            border-radius: 10px;
-            max-width: 300px;
-            transition: 0.3s;
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
         }
+
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 40px rgba(255,204,0,0.12);
+            border-color: rgba(255,204,0,0.25);
+        }
+
         .product-item img {
             width: 100%;
-            border-radius: 10px;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            display: block;
         }
-        .product-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px #ffcc00;
+
+        .product-item:hover img {
+            transform: scale(1.04);
         }
-        .cta {
-            padding: 40px;
-            background: linear-gradient(45deg, #ffcc00, #ff7700);
-            padding-bottom: 80px;
-            color: black;
+
+        .product-item-body {
+            padding: 1.1rem 1.25rem 1.25rem;
         }
-        .cta-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #000;
-            color: #ffcc00;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: 0.3s;
+
+        .product-item-body p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6;
         }
-        .cta-button:hover {
-            background: #222;
-            /* Responsive Styles */
+
+        .product-item-hint {
+            font-size: 0.72rem;
+            color: rgba(255,204,0,0.6);
+            margin-top: 0.6rem;
+            letter-spacing: 0.5px;
         }
-        /* Popup Modal Styles */
+
+        /* ── Modal ────────────────────────────────────── */
         .modal {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            inset: 0;
+            background: rgba(0,0,0,0.85);
             justify-content: center;
             align-items: center;
             z-index: 9999;
-            overflow: hidden; /* Prevents full-page scrolling when the modal is open */
+            padding: 1.5rem;
+        }
+
+        .modal.open {
+            display: flex;
         }
 
         .modal-content {
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 80%;
-            max-width: 600px;
-            max-height: 90vh; /* Ensures the modal never stretches beyond 90% of screen height */
-            overflow-y: auto; /* Enables scrolling inside the modal if content is too large */
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            width: 100%;
+            max-width: 620px;
+            max-height: 90vh;
+            overflow-y: auto;
             position: relative;
+            text-align: center;
         }
 
-    
-        .modal img {
-            width: 100%;
-            border-radius: 10px;
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            background: var(--gold);
+            color: #000;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            transition: background var(--transition), transform var(--transition);
         }
+
+        .modal-close:hover {
+            background: #e6b800;
+            transform: scale(1.1) rotate(90deg);
+        }
+
+        .modal-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0.5rem 0 0.25rem;
+        }
+
+        .modal-subtitle {
+            font-size: 0.92rem;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+
+        .modal-description {
+            font-size: 0.88rem;
+            color: #bbb;
+            line-height: 1.7;
+            margin: 0.75rem 0 1rem;
+            text-align: left;
+        }
+
+        .modal img#mainImage {
+            width: 100%;
+            max-height: 380px;
+            object-fit: contain;
+            border-radius: var(--radius);
+            margin-bottom: 0.75rem;
+        }
+
         .thumbnail-container {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 0.5rem;
         }
+
         .thumbnail-container img {
-            width: 80px;
+            width: 72px;
+            height: 72px;
+            object-fit: cover;
+            border-radius: 4px;
             cursor: pointer;
-            border-radius: 5px;
-            transition: 0.3s;
+            border: 2px solid transparent;
+            transition: border-color var(--transition), transform var(--transition);
         }
+
         .thumbnail-container img:hover {
-            transform: scale(1.1);
+            border-color: var(--gold);
+            transform: scale(1.05);
         }
-        .modal-title {
-            font-size: 24px;
-            margin-top: 10px;
+
+        /* ── CTA band ─────────────────────────────────── */
+        .cta-band {
+            background: linear-gradient(135deg, #1a1200 0%, #0a0a0a 40%, #1a0a00 100%);
+            border-top: 1px solid var(--border);
+            padding: 6rem 1.5rem;
+            text-align: center;
         }
-        .modal-subtitle {
-            font-size: 18px;
-            color: #ffcc00;
+
+        .cta-band h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
         }
-        .modal-description {
-            margin-top: 10px;
-            font-size: 14px;
-            opacity: 0.8;
+
+        .cta-band p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
         }
-        @media screen and (max-width: 768px) {
-            .hero {
-                height: auto;
-                padding: 40px 20px;
-            }
-            .hero-content h1 {
-                font-size: 24px;
-            }
-            .cta-button {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-            .product-grid, .features {
-                flex-direction: column;
-                align-items: center;
-            }
-            .product-showcase h2{
-                font-size: 20px;
-                display: flex;
-                justify-content: center;
-                color: #ffcc00;
-                text-shadow: 0 0 20px #ffcc00;
-            }
-            .product-item, .feature-item {
-                max-width: 90%;
-            }
-            .testimonial-slider {
-                flex-direction: column;
-            }
+
+        @media (max-width: 560px) {
+            .product-grid { grid-template-columns: 1fr; }
         }
-        
     </style>
 </head>
 <body>
     <header>
-        <!-- Your existing header code -->
-        <!-- Your existing header code -->
-        <!-- Your existing header code -->
         <div class="logo">
-            <img src="MEDIA/US_logo.png" alt="Ultra Signs LLC Logo">
-            <img src="MEDIA/Luminart_logo.png" alt="Lumin Art LLC Logo">
+            <img src="MEDIA/US_logo.png" alt="Ultra Signs LLC">
+            <img src="MEDIA/Luminart_logo.png" alt="Luminart LLC">
         </div>
         <nav>
             <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="products.html">Products & Services</a></li>
+                <li><a href="products.html">Products &amp; Services</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="https://www.instagram.com/ultrasignsllc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="MEDIA/instagram.png" class="socialmedia" alt="Instagram"></a></li>
@@ -229,293 +329,346 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
-        <section class="hero">
-            <h1>Find the Perfect <span class="glow">LED Sign</span> for Your Business!</h1>
-            <p>Explore our wide range of LED signage solutions designed to attract and impress.</p>
+        <section class="page-hero">
+            <h1>Find the Perfect <span class="glow">LED Sign</span></h1>
+            <p>Browse our full catalog of custom LED signage solutions designed to attract and impress.</p>
         </section>
 
         <section class="filter-section">
-            <input type="text" id="searchBar" placeholder="Search products..." onkeyup="filterProducts()">
+            <div class="search-wrap">
+                <input type="text" id="searchBar" placeholder="Search products..." oninput="filterProducts()">
+            </div>
             <div class="filters">
-                <button class="filter-btn" onclick="filterCategory('all')">All</button>
-                <button class="filter-btn" onclick="filterCategory('Storefront')">Storefront</button>
-                <button class="filter-btn" onclick="filterCategory('3D')">3D</button>
-                <button class="filter-btn" onclick="filterCategory('Customizable')">Customizable</button>
-                <button class="filter-btn" onclick="filterCategory('Logos')">Logos</button>
-                <button class="filter-btn" onclick="filterCategory('Words')">Words</button>
-                <button class="filter-btn" onclick="filterCategory('Characters')">Characters</button>
-                <button class="filter-btn" onclick="filterCategory('Numbers')">Numbers</button>
-                <button class="filter-btn" onclick="filterCategory('Ultra-Thin')">Ultra-Thin</button>
-                <button class="filter-btn" onclick="filterCategory('Multi-Layered')">Multi-Layered</button>
-                <button class="filter-btn" onclick="filterCategory('Backlit')">Backlit</button>
-                <button class="filter-btn" onclick="filterCategory('Infinity_Mirror')">Infinity Mirror</button>
-                <button class="filter-btn" onclick="filterCategory('Engraved_Mirror')">Engraved Mirror</button>
-                <button class="filter-btn" onclick="filterCategory('Business')">Business</button>
-                <button class="filter-btn" onclick="filterCategory('Home Decor')">Home Decor</button>
-                <button class="filter-btn" onclick="filterCategory('Round')">Round</button>
-                <button class="filter-btn" onclick="filterCategory('Square')">Square</button>
-                <button class="filter-btn" onclick="filterCategory('Elliptical')">Elliptical</button>
-                <button class="filter-btn" onclick="filterCategory('Indoor')">Indoor</button>
-                <button class="filter-btn" onclick="filterCategory('Outdoor')">Outdoor</button>
-                <button class="filter-btn" onclick="filterCategory('Lightweight')">Lightweight</button>
-                <button class="filter-btn" onclick="filterCategory('Make_Your_Own')">Make Your Own</button>
+                <button class="filter-btn active" onclick="filterCategory('all', this)">All</button>
+                <button class="filter-btn" onclick="filterCategory('Storefront', this)">Storefront</button>
+                <button class="filter-btn" onclick="filterCategory('3D', this)">3D</button>
+                <button class="filter-btn" onclick="filterCategory('Customizable', this)">Customizable</button>
+                <button class="filter-btn" onclick="filterCategory('Logos', this)">Logos</button>
+                <button class="filter-btn" onclick="filterCategory('Words', this)">Words</button>
+                <button class="filter-btn" onclick="filterCategory('Characters', this)">Characters</button>
+                <button class="filter-btn" onclick="filterCategory('Numbers', this)">Numbers</button>
+                <button class="filter-btn" onclick="filterCategory('Ultra-Thin', this)">Ultra-Thin</button>
+                <button class="filter-btn" onclick="filterCategory('Multi-Layered', this)">Multi-Layered</button>
+                <button class="filter-btn" onclick="filterCategory('Backlit', this)">Backlit</button>
+                <button class="filter-btn" onclick="filterCategory('Infinity_Mirror', this)">Infinity Mirror</button>
+                <button class="filter-btn" onclick="filterCategory('Engraved_Mirror', this)">Engraved Mirror</button>
+                <button class="filter-btn" onclick="filterCategory('Business', this)">Business</button>
+                <button class="filter-btn" onclick="filterCategory('Home Decor', this)">Home Decor</button>
+                <button class="filter-btn" onclick="filterCategory('Indoor', this)">Indoor</button>
+                <button class="filter-btn" onclick="filterCategory('Outdoor', this)">Outdoor</button>
+                <button class="filter-btn" onclick="filterCategory('Make_Your_Own', this)">Make Your Own</button>
             </div>
         </section>
 
+        <section class="products-section">
+            <div id="products" class="product-grid">
 
-        <section id="products" class="product-grid">
-            <div class="product-item" 
-                data-title="3D Illuminated Ultra-Thin Custom Signs" 
-                data-subtitle="Premium Eye-Catching Ultra-Thin Business Sign" 
-                data-category="Customizable Business Logos Decoration Indoor Ultra-Thin Make_Your_Own" 
-                data-description="Bring your ideas to life with our fully customizable Ultra-Thin bright screen, perfect for **logos, images, words, characters, menus, and much more!** in any font of your choice, with your own images. Crafted for brilliance and precision, these illuminated pieces add a modern, striking touch to **business branding, decoration, and personalized spaces**, ensuring a sleek and durable display for any environment." 
-                data-images='["MEDIA/lash (22).jpg","MEDIA/lash (19).jpg", "MEDIA/lash (20).jpg", "MEDIA/lash (21).jpg", "MEDIA/lash (23).jpg"]'>
-                
-                <img src="MEDIA/lash (22).jpg" alt="Ultra-Thin">
-                <p>Ultra-thin, illuminated display sign for logos, images, and personalized words in any font, offering a modern and durable display.</p>
+                <div class="product-item"
+                    data-title="3D Illuminated Ultra-Thin Custom Signs"
+                    data-subtitle="Premium Eye-Catching Ultra-Thin Business Sign"
+                    data-category="Customizable Business Logos Decoration Indoor Ultra-Thin Make_Your_Own"
+                    data-description="Bring your ideas to life with our fully customizable Ultra-Thin bright screen, perfect for logos, images, words, characters, menus, and much more! in any font of your choice, with your own images. Crafted for brilliance and precision, these illuminated pieces add a modern, striking touch to business branding, decoration, and personalized spaces, ensuring a sleek and durable display for any environment."
+                    data-images='["MEDIA/lash (22).jpg","MEDIA/lash (19).jpg","MEDIA/lash (20).jpg","MEDIA/lash (21).jpg","MEDIA/lash (23).jpg"]'>
+                    <img src="MEDIA/lash (22).jpg" alt="Ultra-Thin LED Sign">
+                    <div class="product-item-body">
+                        <p>Ultra-thin illuminated display — logos, images, personalized words in any font, modern and durable.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
+                <div class="product-item"
+                    data-title="Custom LED Storefront Sign"
+                    data-subtitle="Versatile &amp; Stylish Business Signage"
+                    data-category="Storefront Indoor Outdoor Customizable Make_Your_Own Round Square Elliptical Decoration Engraved_Mirror"
+                    data-description="Elevate your brand with this highly customizable LED sign, perfect for coffee shops, barbers, ice cream shops, and indoor decor. Available in a variety of shapes (round, square, elliptical, and more) and a wide selection of colors, this advanced signage solution allows you to create unique, eye-catching displays for any business or personal space."
+                    data-images='["MEDIA/lash (27).jpg","MEDIA/lash (24).jpg","MEDIA/lash (17).jpg","MEDIA/lash (18).jpg"]'>
+                    <img src="MEDIA/lash (27).jpg" alt="Custom LED Storefront Sign">
+                    <div class="product-item-body">
+                        <p>Modern, bright, and fully customizable — range of colors, shapes, and creative possibilities.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
+                <div class="product-item"
+                    data-title="3D Illuminated Custom Signs"
+                    data-subtitle="Versatile &amp; Eye-Catching LED Creations"
+                    data-category="3D Customizable Business Logos Decoration Indoor Outdoor Make_Your_Own"
+                    data-description="Bring your ideas to life with our fully customizable 3D LED signs, perfect for logos, images, words, and characters in any font of your choice. Crafted for brilliance and precision, these illuminated pieces add a modern, striking touch to business branding, decoration, and personalized spaces."
+                    data-images='["MEDIA/3d.jpg","MEDIA/3d2.jpg","MEDIA/3d3.jpg","MEDIA/3d4.jpg","MEDIA/3d5.jpg"]'>
+                    <img src="MEDIA/3d.jpg" alt="3D Illuminated Custom Signs">
+                    <div class="product-item-body">
+                        <p>Bold 3D LED designs — perfect for logos, images, personalized words, modern and durable.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
+                <div class="product-item"
+                    data-title="Multi-Layered LED Backlit Sign"
+                    data-subtitle="Premium Custom Business &amp; Home Signage"
+                    data-category="Multi-Layered LED Signs Customizable Engraved_Mirror Storefront Decoration Make_Your_Own"
+                    data-description="Make a bold statement with this multi-layered LED sign, featuring engraved mirror backlighting that enhances its depth and brilliance. Designed with customizable colors, materials, and finishes, this sign is perfect for logos, business branding, and home decor."
+                    data-images='["MEDIA/nba.png","MEDIA/nba1.jpg","MEDIA/nba2.jpg","MEDIA/nba3.jpg","MEDIA/nba4.jpg"]'>
+                    <img src="MEDIA/nba.png" alt="Multi-Layered LED Backlit Sign">
+                    <div class="product-item-body">
+                        <p>Sleek engraved mirror LED sign — multi-layered depth with premium materials.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
+                <div class="product-item"
+                    data-title="Engraved LED Business Sign"
+                    data-subtitle="Modern Branding with a Backlit Glow"
+                    data-category="Storefront LED Signs Customizable Round Engraved_Mirror Make_Your_Own Business Branding"
+                    data-description="Enhance your brand presence with this sleek, single-layer illuminated sign, featuring an engraved mirror backlit design that boosts visibility and depth. Fully customizable in size, design, and LED color — ideal for storefronts, businesses, and home decor."
+                    data-images='["MEDIA/Starbucks2.png","MEDIA/Starbucks1.jpg","MEDIA/Starbucks3.jpg","MEDIA/Starbucks4.jpg"]'>
+                    <img src="MEDIA/Starbucks2.png" alt="Engraved LED Business Sign">
+                    <div class="product-item-body">
+                        <p>Minimalist yet bold — customizable engraved LED sign, refined glow for commercial and home use.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
+                <div class="product-item"
+                    data-title="Ultra-Thin LED Framed Sign"
+                    data-subtitle="Elegant &amp; Customizable Backlit Design"
+                    data-category="Ultra-Thin Customizable Backlit Signage Business Indoor Outdoor Home Decoration Engraved_Mirror"
+                    data-description="Celebrate in style and sophistication with this elegant ultra-thin LED sign, featuring a mirror backing and integrated side lighting for a radiant glow. With a slim 0.4-inch (1 cm) profile, this lightweight and modern sign blends seamlessly into any space. Available in a variety of board colors and LED hues."
+                    data-images='["MEDIA/hbd-red.jpg","MEDIA/hbd-red1.jpg","MEDIA/hbd-red2.jpg"]'>
+                    <img src="MEDIA/hbd-red.jpg" alt="Ultra-Thin LED Framed Sign">
+                    <div class="product-item-body">
+                        <p>Sleek 0.4-inch thin sign with mirrored finish and customizable side lighting.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
+                <div class="product-item"
+                    data-title="Modern Edge-Lit LED Sign"
+                    data-subtitle="Slim &amp; Stylish LED Backlit Display"
+                    data-category="Ultra-Thin LED Customizable Backlit Signs Indoor Outdoor Decoration Make_Your_Own"
+                    data-description="Illuminate your space with this sleek, ultra-thin LED sign, featuring a mirror backing and a frame-integrated LED system for a striking glow. At just 0.4 inches (1 cm) thick, this elegant design is fully customizable. Ideal for events, home decor, businesses, and branding."
+                    data-images='["MEDIA/hbd-blue.jpg","MEDIA/hbd-blue1.jpg","MEDIA/hbd-blue2.jpg","MEDIA/hbd-blue3.jpg"]'>
+                    <img src="MEDIA/hbd-blue.jpg" alt="Modern Edge-Lit LED Sign">
+                    <div class="product-item-body">
+                        <p>Stylish 0.4-inch thin sign with mirrored finish — designed to make any space glow with elegance.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
+                <div class="product-item"
+                    data-title="Infinity Mirror LED Letters"
+                    data-subtitle="Customizable 3D Lighted Characters"
+                    data-category="Infinity_Mirror Customizable Make_Your_Own 3D Storefront Decoration Indoor"
+                    data-description="Experience the captivating depth of our Infinity Mirror LED Letters — fully customizable in font, frame color, and lighting. Whether for storefront signage, room decoration, or personalized logos, these illuminated characters offer adjustable brightness, various thickness levels, and endless design possibilities."
+                    data-images='["MEDIA/ABCD.png","MEDIA/ABCD1.jpg","MEDIA/ABCD2.jpg","MEDIA/ABCD3.jpg","MEDIA/ABCD4.jpg"]'>
+                    <img src="MEDIA/ABCD.png" alt="Infinity Mirror LED Letters">
+                    <div class="product-item-body">
+                        <p>Bold Infinity Mirror LED Letters — stunning 3D illusion, perfect for signage, logos, and personalized decor.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
+                <div class="product-item"
+                    data-title="Custom LED Storefront Sign"
+                    data-subtitle="Versatile &amp; Stylish Business Signage"
+                    data-category="Storefront Indoor Outdoor Customizable Make_Your_Own Round Square Elliptical Decoration"
+                    data-description="Elevate your brand with this highly customizable LED sign, perfect for coffee shops, barbers, ice cream shops, and indoor decor. Available in a variety of shapes and a wide selection of colors, this sign blends creativity with high-end customization."
+                    data-images='["MEDIA/PARKVIEW-COFFE.png","MEDIA/PARKVIEW-COFFE1.jpg","MEDIA/PARKVIEW-COFFE2.jpg","MEDIA/PARKVIEW-COFFE3.jpg"]'>
+                    <img src="MEDIA/PARKVIEW-COFFE.png" alt="Custom LED Storefront Sign">
+                    <div class="product-item-body">
+                        <p>Modern, bright, fully customizable — perfect for businesses and indoor decor.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
+                <div class="product-item"
+                    data-title="Custom 3D LED Letters"
+                    data-subtitle="Lightweight &amp; Versatile Signage"
+                    data-category="3D Customizable Indoor Outdoor Decoration Logos Words Characters Numbers"
+                    data-description="Illuminate your space with these bright, lightweight, and fully customizable 3D LED letters. Available in a variety of textures, colors, and fonts — perfect for logos, business branding, personal decor, words, characters, and numbers. Designed for both indoor and outdoor use."
+                    data-images='["MEDIA/LA1.jpg","MEDIA/LA2.jpg"]'>
+                    <img src="MEDIA/LA1.jpg" alt="Custom 3D LED Letters">
+                    <div class="product-item-body">
+                        <p>Bright, lightweight 3D LED letters — perfect for logos, words, numbers, and stylish decor.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
+                <div class="product-item"
+                    data-title="Red LED Storefront Sign"
+                    data-subtitle="Vibrant &amp; Customizable Business Signage"
+                    data-category="Storefront Indoor Outdoor Customizable Make_Your_Own Round Square Elliptical Decoration"
+                    data-description="Make your business stand out with this striking red LED sign, perfect for coffee shops, barbers, ice cream shops, and indoor decor. Designed for maximum customization — various shapes and colors allowing you to match your branding effortlessly."
+                    data-images='["MEDIA/PV-RED.png","MEDIA/PV-RED2.jpg","MEDIA/PV-RED3.jpg","MEDIA/PV-RED4.jpg"]'>
+                    <img src="MEDIA/PV-RED.png" alt="Red LED Storefront Sign">
+                    <div class="product-item-body">
+                        <p>Eye-catching customizable red LED sign — bold branding for businesses, cafes, and indoor decor.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
+                <div class="product-item"
+                    data-title="Outline-Lit LED Sign"
+                    data-subtitle="Sleek &amp; Lightweight Customizable Signage"
+                    data-category="Storefront Indoor Customizable Make_Your_Own Business Logos Decoration Room"
+                    data-description="Enhance your space with this lightweight, customizable LED sign featuring outline lighting for a bold, modern look. Available in a variety of colors for both materials and lights — perfect for business branding, logos, indoor decor, and room personalization."
+                    data-images='["MEDIA/CPMA.png","MEDIA/CPMA1.jpg","MEDIA/CPMA2.jpg"]'>
+                    <img src="MEDIA/CPMA.png" alt="Outline-Lit LED Sign">
+                    <div class="product-item-body">
+                        <p>Modern, lightweight LED sign with outline lighting — perfect for businesses, logos, and indoor decor.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
+                <div class="product-item"
+                    data-title="Custom Multi-Color LED Sign"
+                    data-subtitle="Vibrant &amp; Personalized Branding Solution"
+                    data-category="Storefront Customizable Multi-Layered Backlit Business Logos Indoor Outdoor Decoration Make_Your_Own"
+                    data-description="Make a bold impact with this highly customizable LED sign, offering a variety of colors, fonts, and designs to match any branding or decorative need. Featuring multi-layered construction and backlit illumination, this sign enhances visibility and creates an eye-catching display."
+                    data-images='["MEDIA/VOLUME1.jpg","MEDIA/VOLUME2.jpg","MEDIA/VOLUME3.jpg","MEDIA/VOLUME4.jpg","MEDIA/VOLUME5.jpg"]'>
+                    <img src="MEDIA/VOLUME1.jpg" alt="Custom Multi-Color LED Sign">
+                    <div class="product-item-body">
+                        <p>Bright, customizable multi-layered LED sign — the perfect choice for businesses, branding, and creative spaces.</p>
+                        <p class="product-item-hint">Click image to view details &rarr;</p>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="product-item" 
-                data-title="Custom LED Storefront Sign" 
-                data-subtitle="Versatile & Stylish Business Signage" 
-                data-category="Storefront Indoor Outdoor Customizable Make_Your_Own Round Square Elliptical Decoration Engraved_Mirror" 
-                data-description="Elevate your brand with this **highly customizable LED sign**, perfect for **coffee shops, barbers, ice cream shops, and indoor decor**. Available in a **variety of shapes** (round, square, elliptical, and more) and **a wide selection of colors**, this advanced signage solution allows you to create unique, eye-catching displays for any business or personal space. Designed for both storefronts and indoor decoration, this sign blends creativity with high-end customization." 
-                data-images='["MEDIA/lash (27).jpg", "MEDIA/lash (24).jpg", "MEDIA/lash (17).jpg", "MEDIA/lash (18).jpg"]'>
-                
-                <img src="MEDIA/lash (27).jpg" alt="Custom LED Storefront Sign">
-                <p>Modern, bright, and fully customizable—this LED sign is perfect for businesses and indoor decor, offering a range of colors, shapes, and creative possibilities!</p>
-            </div>
-
-            <div class="product-item" 
-                data-title="3D Illuminated Custom Signs" 
-                data-subtitle="Versatile & Eye-Catching LED Creations" 
-                data-category="3D Customizable Business Logos Decoration Indoor Outdoor Make_Your_Own" 
-                data-description="Bring your ideas to life with our fully customizable **3D LED signs**, perfect for **logos, images, words, and characters** in any font of your choice. Crafted for brilliance and precision, these illuminated pieces add a modern, striking touch to **business branding, decoration, and personalized spaces**, ensuring a sleek and durable display for any environment." 
-                data-images='["MEDIA/3d.jpg", "MEDIA/3d2.jpg", "MEDIA/3d3.jpg", "MEDIA/3d4.jpg", "MEDIA/3d5.jpg"]'>
-                
-                <img src="MEDIA/3d.jpg" alt="3D Illuminated Custom Signs">
-                <p>Create bold and illuminated 3D designs—perfect for logos, images, and personalized words in any font, offering a modern and durable display.</p>
-            </div>
-
-            <div class="product-item" 
-                data-title="Multi-Layered LED Backlit Sign" 
-                data-subtitle="Premium Custom Business & Home Signage" 
-                data-category="Multi-Layered LED Signs Customizable Engraved_Mirror Storefront Decoration Make_Your_Own" 
-                data-description="Make a **bold statement** with this multi-layered LED sign, featuring **engraved mirror backlighting** that enhances its depth and brilliance. Designed with **customizable colors, materials, and finishes**, this sign is perfect for **logos, business branding, and home decor**. Crafted for durability and elegance, it delivers a **dynamic visual impact** that elevates any space." 
-                data-images='["MEDIA/nba.png", "MEDIA/nba1.jpg", "MEDIA/nba2.jpg", "MEDIA/nba3.jpg", "MEDIA/nba4.jpg"]'>
-                
-                <img src="MEDIA/nba.png" alt="Multi-Layered LED Backlit Sign">
-                <p>Sleek, illuminated, and fully customizable—this engraved mirror LED sign combines multi-layered depth with premium materials for a truly eye-catching display.</p>
-            </div>
-
-            <div class="product-item" 
-                data-title="Engraved LED Business Sign" 
-                data-subtitle="Modern Branding with a Backlit Glow" 
-                data-category="Storefront LED Signs Customizable Round Engraved_Mirror Make_Your_Own Business Branding" 
-                data-description="Enhance your brand presence with this **sleek, single-layer illuminated sign**, featuring an **engraved mirror backlit design** that boosts visibility and depth. Fully customizable in **size, design, and LED color**, this sign is **ideal for storefronts, businesses, and home decor**, offering a clean and professional glow that makes an impact." 
-                data-images='["MEDIA/Starbucks2.png", "MEDIA/Starbucks1.jpg", "MEDIA/Starbucks3.jpg", "MEDIA/Starbucks4.jpg"]'>
-                
-                <img src="MEDIA/Starbucks2.png" alt="Engraved LED Business Sign">
-                <p>Minimalist yet bold—this engraved LED sign offers a customizable, refined glow, making it the perfect choice for commercial and home use.</p>
-            </div>
-
-            <div class="product-item" 
-                data-title="Ultra-Thin LED Framed Sign" 
-                data-subtitle="Elegant & Customizable Backlit Design" 
-                data-category="Ultra-Thin Customizable Backlit Signage Business Indoor Outdoor Home Decoration Engraved_Mirror" 
-                data-description="Celebrate in **style and sophistication** with this elegant **ultra-thin LED sign**, featuring a **mirror backing and integrated side lighting** for a radiant glow. With a **slim 0.4-inch (1 cm) profile**, this **lightweight and modern** sign blends seamlessly into any space. Available in a variety of **board colors and LED hues**, it's the perfect **statement piece for home decor, events, and business signage**." 
-                data-images='["MEDIA/hbd-red.jpg", "MEDIA/hbd-red1.jpg", "MEDIA/hbd-red2.jpg"]'>
-                
-                <img src="MEDIA/hbd-red.jpg" alt="Ultra-Thin LED Framed Sign">
-                <p>A sleek, **0.4-inch thin**, illuminated sign with a mirrored finish and customizable side lighting—ideal for creating an elegant atmosphere anywhere.</p>
-            </div>
-
-            <div class="product-item" 
-                data-title="Modern Edge-Lit LED Sign" 
-                data-subtitle="Slim & Stylish LED Backlit Display" 
-                data-category="Ultra-Thin LED Customizable Backlit Signs Indoor Outdoor Decoration Make_Your_Own" 
-                data-description="Illuminate your space with this **sleek, ultra-thin LED sign**, featuring a **mirror backing and a frame-integrated LED system** for a striking glow. At just **0.4 inches (1 cm) thick**, this elegant design is fully customizable, allowing you to select **board colors and LED hues** to perfectly match your vision. Ideal for **events, home decor, businesses, and branding**, this sign adds a **modern and captivating presence** to any environment." 
-                data-images='["MEDIA/hbd-blue.jpg", "MEDIA/hbd-blue1.jpg", "MEDIA/hbd-blue2.jpg", "MEDIA/hbd-blue3.jpg"]'>
-                
-                <img src="MEDIA/hbd-blue.jpg" alt="Modern Edge-Lit LED Sign">
-                <p>A stylish, **0.4-inch thin**, illuminated sign with a mirrored finish and customizable side lighting—designed to make any space glow with elegance and vibrancy.</p>
-            </div>
-
-
-            <div class="product-item" 
-                data-title="Infinity Mirror LED Letters" 
-                data-subtitle="Customizable 3D Lighted Characters" 
-                data-category="Infinity_Mirror Customizable Make_Your_Own 3D Storefront Decoration Indoor" 
-                data-description="Experience the captivating depth of our Infinity Mirror LED Letters—fully customizable in font, frame color, and lighting. Whether for storefront signage, room decoration, or personalized logos, these illuminated characters offer adjustable brightness, various thickness levels, and endless design possibilities. Ideal for businesses and personal spaces alike!" 
-                data-images='["MEDIA/ABCD.png", "MEDIA/ABCD1.jpg", "MEDIA/ABCD2.jpg", "MEDIA/ABCD3.jpg", "MEDIA/ABCD4.jpg"]'>
-                
-                <img src="MEDIA/ABCD.png" alt="Infinity Mirror LED Letters">
-                <p>Bold, bright, and fully customizable—these Infinity Mirror LED Letters create a stunning 3D illusion, perfect for signage, logos, and personalized decor!</p>
-            </div>
-
-            <div class="product-item" 
-                data-title="Custom LED Storefront Sign" 
-                data-subtitle="Versatile & Stylish Business Signage" 
-                data-category="Storefront Indoor Outdoor Customizable Make_Your_Own Round Square Elliptical Decoration" 
-                data-description="Elevate your brand with this **highly customizable LED sign**, perfect for **coffee shops, barbers, ice cream shops, and indoor decor**. Available in a **variety of shapes** (round, square, elliptical, and more) and **a wide selection of colors**, this advanced signage solution allows you to create unique, eye-catching displays for any business or personal space. Designed for both storefronts and indoor decoration, this sign blends creativity with high-end customization." 
-                data-images='["MEDIA/PARKVIEW-COFFE.png", "MEDIA/PARKVIEW-COFFE1.jpg", "MEDIA/PARKVIEW-COFFE2.jpg", "MEDIA/PARKVIEW-COFFE3.jpg"]'>
-                
-                <img src="MEDIA/PARKVIEW-COFFE.png" alt="Custom LED Storefront Sign">
-                <p>Modern, bright, and fully customizable—this LED sign is perfect for businesses and indoor decor, offering a range of colors, shapes, and creative possibilities!</p>
-            </div>
-
-            <div class="product-item" 
-                data-title="Custom 3D LED Letters" 
-                data-subtitle="Lightweight & Versatile Signage" 
-                data-category="3D Customizable Indoor Outdoor Decoration Logos Words Characters Numbers" 
-                data-description="Illuminate your space with these **bright, lightweight, and fully customizable 3D LED letters**. Available in **a variety of textures, colors, and fonts**, this signage solution is **perfect for everything from logos and business branding to personal decor, words, single characters, and numbers**. Designed for **both indoor and outdoor use**, these high-impact illuminated signs make any message stand out with style and clarity!" 
-                data-images='["MEDIA/LA1.jpg", "MEDIA/LA2.jpg"]'>
-                
-                <img src="MEDIA/LA1.jpg" alt="Custom 3D LED Letters">
-                <p>Bright, lightweight, and fully customizable—these **3D LED letters** are the perfect solution for logos, words, numbers, and stylish decor indoors or outdoors!</p>
-            </div>
-
-            <div class="product-item" 
-                data-title="Red LED Storefront Sign" 
-                data-subtitle="Vibrant & Customizable Business Signage" 
-                data-category="Storefront Indoor Outdoor Customizable Make_Your_Own Round Square Elliptical Decoration" 
-                data-description="Make your business stand out with this **striking red LED sign**, perfect for **coffee shops, barbers, ice cream shops, and indoor decor**. Designed for **maximum customization**, this sign is available in **various shapes and colors**, allowing you to match your branding effortlessly. Whether for a storefront, room decor, or a creative business display, this high-end LED signage solution adds a bold and professional touch." 
-                data-images='["MEDIA/PV-RED.png", "MEDIA/PV-RED2.jpg", "MEDIA/PV-RED3.jpg", "MEDIA/PV-RED4.jpg"]'>
-                
-                <img src="MEDIA/PV-RED.png" alt="Red LED Storefront Sign">
-                <p>Eye-catching, **customizable, and stylish**—this bold red LED sign is the perfect branding solution for businesses, cafes, and personalized indoor decor!</p>
-            </div>
-
-            <div class="product-item" 
-                data-title="Outline-Lit LED Sign" 
-                data-subtitle="Sleek & Lightweight Customizable Signage" 
-                data-category="Storefront Indoor Customizable Make_Your_Own Business Logos Decoration Room" 
-                data-description="Enhance your space with this **lightweight, customizable LED sign**, featuring **outline lighting** for a bold, modern look. Available in a **variety of colors for both materials and lights**, this sign is perfect for **business branding, logos, indoor decor, and room personalization**. Whether for commercial or domestic use, this sleek signage solution adds a professional yet stylish touch to any environment." 
-                data-images='["MEDIA/CPMA.png", "MEDIA/CPMA1.jpg", "MEDIA/CPMA2.jpg"]'>
-                
-                <img src="MEDIA/CPMA.png" alt="Outline-Lit LED Sign">
-                <p>Modern, lightweight, and fully customizable—this LED sign with **outline lighting** is the perfect choice for businesses, logos, and stylish indoor decoration!</p>
-            </div>
-
-            <div class="product-item" 
-                data-title="Custom Multi-Color LED Sign" 
-                data-subtitle="Vibrant & Personalized Branding Solution" 
-                data-category="Storefront Customizable Multi-Layered Backlit Business Logos Indoor Outdoor Decoration Make_Your_Own" 
-                data-description="Make a bold impact with this **highly customizable LED sign**, offering a **variety of colors, fonts, and designs** to match any branding or decorative need. Featuring **multi-layered construction and backlit illumination**, this sign enhances visibility and creates an eye-catching display. Perfect for **businesses, logos, creative spaces, and indoor or outdoor decoration**, this premium LED signage solution combines modern aesthetics with vibrant lighting." 
-                data-images='["MEDIA/VOLUME1.jpg", "MEDIA/VOLUME2.jpg", "MEDIA/VOLUME3.jpg", "MEDIA/VOLUME4.jpg", "MEDIA/VOLUME5.jpg"]'>
-                
-                <img src="MEDIA/VOLUME1.jpg" alt="Custom Multi-Color LED Sign">
-                <p>Bright, customizable, and uniquely designed—this multi-layered LED sign is the perfect choice for businesses, branding, and creative spaces.</p>
-            </div>
-
-
         </section>
-    
-        <section class="cta">
-            <h2>Need a Custom LED Sign?</h2>
-            <a href="contact.html" class="cta-button">Get a Free Quote</a>
+
+        <section class="cta-band">
+            <h2 class="reveal">Need a <span class="glow">Custom</span> LED Sign?</h2>
+            <p class="reveal" style="transition-delay:.1s">Don't see exactly what you need? Every sign is made to order. Let's design yours.</p>
+            <a href="contact.html" class="btn btn-primary reveal" style="transition-delay:.2s">Get a Free Quote</a>
         </section>
     </main>
-    
-    <!-- Modal Structure -->
+
+    <!-- Modal -->
     <div class="modal" id="imageModal">
         <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
             <h2 class="modal-title"></h2>
             <h3 class="modal-subtitle"></h3>
-            <p class="modal-description"></p>
-            <img id="mainImage" src="" alt="Expanded view">
+            <img id="mainImage" src="" alt="Product view">
             <div class="thumbnail-container" id="thumbnailContainer"></div>
+            <p class="modal-description"></p>
         </div>
     </div>
 
     <footer>
-        <!-- Your existing footer code -->
-        <!-- Your existing footer code -->
-        <!-- Your existing footer code -->
-        <p>&copy; 2024 Ultra Signs LLC. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/ultrasignsllc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="MEDIA/instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/profile.php?id=61573925590591"><img src="MEDIA/facebook.png" alt="Facebook"></a>
-            <a href="https://www.tiktok.com/@ultrasignsllc?is_from_webapp=1&sender_device=pc"><img src="MEDIA/tiktok.png" alt="TikTok"></a>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img class="footer-logo" src="MEDIA/US_logo.png" alt="Ultra Signs LLC">
+                <p>Premium custom LED signage for businesses &amp; spaces in Houston, TX. We bring your brand to life.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="products.html">Products &amp; Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <address>
+                    536 Memorial City Mall<br>
+                    Houston, TX 77024<br>
+                    <a href="tel:+18327249543">+1 (832) 724-9543</a><br>
+                    <a href="mailto:contact@ultrasigns.us">contact@ultrasigns.us</a>
+                </address>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/ultrasignsllc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="MEDIA/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61573925590591"><img src="MEDIA/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.tiktok.com/@ultrasignsllc?is_from_webapp=1&sender_device=pc"><img src="MEDIA/tiktok.png" alt="TikTok"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ultra Signs LLC. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Animate the hero content
-        gsap.from(".hero h1", { opacity: 0, y: -30, duration: 1 });
-
-        // Fix for product items: Use gsap.to() instead of gsap.from()
-        gsap.to(".product-item", { opacity: 1, y: 0, stagger: 0.2, duration: 1 });
-
-        // Filter functionality
-        function filterProducts() {
-            let input = document.getElementById('searchBar').value.toLowerCase();
-            let items = document.querySelectorAll('.product-item');
-            items.forEach(item => {
-                let text = item.textContent.toLowerCase();
-                item.style.display = text.includes(input) ? 'block' : 'none';
-            });
-        }
-
-        function filterCategory(category) {
-            let items = document.querySelectorAll('.product-item');
-
-            items.forEach(item => {
-                let categories = item.getAttribute('data-category').toLowerCase().split(" ");
-                if (category === 'all' || categories.includes(category.toLowerCase())) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-
-
-        // Menu toggle functionality
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-links').classList.toggle('active');
         });
+
+        gsap.from(".page-hero h1", { opacity: 0, y: -25, duration: 1 });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Filter by search text
+        function filterProducts() {
+            const input = document.getElementById('searchBar').value.toLowerCase();
+            document.querySelectorAll('.product-item').forEach(item => {
+                item.style.display = item.textContent.toLowerCase().includes(input) ? '' : 'none';
+            });
+        }
+
+        // Filter by category
+        function filterCategory(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            document.querySelectorAll('.product-item').forEach(item => {
+                const cats = item.getAttribute('data-category').toLowerCase().split(' ');
+                item.style.display = (category === 'all' || cats.includes(category.toLowerCase())) ? '' : 'none';
+            });
+        }
+
+        // Modal logic
+        const modal = document.getElementById('imageModal');
+
+        function closeModal() {
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('modalClose').addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
         document.querySelectorAll('.product-item img').forEach(img => {
-            img.addEventListener('click', function() {
-                const parent = this.parentElement;
-                const modal = document.getElementById('imageModal');
+            img.addEventListener('click', function () {
+                const parent = this.closest('.product-item');
                 const mainImage = document.getElementById('mainImage');
                 const thumbnails = document.getElementById('thumbnailContainer');
-                const title = document.querySelector('.modal-title');
-                const subtitle = document.querySelector('.modal-subtitle');
-                const description = document.querySelector('.modal-description');
-                
-                title.textContent = parent.getAttribute('data-title');
-                subtitle.textContent = parent.getAttribute('data-subtitle');
-                description.textContent = parent.getAttribute('data-description');
-                
-                const images = JSON.parse(parent.getAttribute('data-images'));
+
+                document.querySelector('.modal-title').textContent = parent.dataset.title;
+                document.querySelector('.modal-subtitle').textContent = parent.dataset.subtitle;
+                document.querySelector('.modal-description').textContent = parent.dataset.description;
+
+                const images = JSON.parse(parent.dataset.images);
                 mainImage.src = images[0];
                 thumbnails.innerHTML = '';
-                
-                images.forEach((image, index) => {
-                    if (index > 0) {
-                        let thumb = document.createElement('img');
-                        thumb.src = image;
-                        thumb.addEventListener('click', function() {
-                            let tempSrc = mainImage.src;
-                            mainImage.src = this.src;
-                            this.src = tempSrc;
-                        });
-                        thumbnails.appendChild(thumb);
-                    }
+
+                images.slice(1).forEach(src => {
+                    const thumb = document.createElement('img');
+                    thumb.src = src;
+                    thumb.addEventListener('click', function () {
+                        const tmp = mainImage.src;
+                        mainImage.src = this.src;
+                        this.src = tmp;
+                    });
+                    thumbnails.appendChild(thumb);
                 });
-                
-                modal.style.display = 'flex';
+
+                modal.classList.add('open');
+                document.body.style.overflow = 'hidden';
             });
-        });
-        
-        document.getElementById('imageModal').addEventListener('click', function(event) {
-            if (event.target === this) {
-                this.style.display = 'none';
-            }
         });
     </script>
 </body>
