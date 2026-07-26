@@ -109,6 +109,30 @@ footer {
     letter-spacing: 0.5px;
 }
 
+/* ── sublimearts.io badge ────────────────────────────── */
+.sublime-badge {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-size: 0.72rem;
+    color: #3a3a3a;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+    transition: color var(--transition);
+}
+
+.sublime-badge strong {
+    color: rgba(255, 204, 0, 0.6);
+    transition: color var(--transition);
+}
+
+.sublime-badge:hover {
+    color: #666;
+}
+
+.sublime-badge:hover strong {
+    color: var(--gold);
+}
+
 /* ── Responsive ──────────────────────────────────── */
 @media (max-width: 768px) {
     .footer-inner {
